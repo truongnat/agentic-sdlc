@@ -178,6 +178,7 @@ Artifacts are organized by type in the `docs/` folder:
 - Provide clear approval before phase transitions
 - Use correct tags to invoke roles
 - Review generated artifacts
+- **Create and save the required report file after completing any task**
 
 ### ❌ DON'T:
 - Skip phases (e.g., coding before design approval)

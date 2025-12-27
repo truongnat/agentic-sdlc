@@ -44,20 +44,54 @@ Instead of one "generic" AI trying to do everything, you get specialized experts
 -   Optimized for iterative development.
 -   Keeps files organized by Sprint (`docs/sprints/sprint-X/`), preventing clutter and ensuring version control.
 
+## � Installation
+
+### Prerequisites
+- Node.js (version 14 or higher)
+- npm or yarn
+
+### Install the CLI Tool
+```bash
+npm install -g template-instructions
+```
+
+### Create a New Project with Instructions
+```bash
+create-instructions my-sdlc-project
+```
+
+This will create a new folder `my-sdlc-project` containing all the instruction files and templates.
+
+### Manual Setup
+Alternatively, clone this repository and copy the `instructions/` folder to your desired location.
+
+## 🔧 Setup with Gemini
+
+1. Copy the instruction files to your Gemini workspace:
+   ```bash
+   cp -r instructions/ ~/.gemini/instructions/
+   ```
+   (Or manually copy the `instructions/` folder to `.gemini/instructions/` in your project.)
+
+2. Ensure your Gemini configuration points to this instructions directory.
+
 ## 📁 Repository Structure
 
 ```
 .
+├── bin/
+│   └── cli.js                      # CLI tool for scaffolding new projects
 ├── instructions/
-│   ├── global.md                    # Mandatory global rules and SDLC workflows
-│   ├── usage.md                     # Detailed usage guide and examples
-│   ├── roles/                       # Role-specific instruction definitions
-│   │   ├── pm.md, po.md, sa.md...   # (PM, PO, SA, UIUX, QA, etc.)
-│   └── templates/                   # Standardized document templates
+│   ├── global.md                   # Mandatory global rules and SDLC workflows
+│   ├── usage.md                    # Detailed usage guide and examples
+│   ├── roles/                      # Role-specific instruction definitions
+│   │   ├── pm.md, po.md, sa.md...  # (PM, PO, SA, UIUX, QA, etc.)
+│   └── templates/                  # Standardized document templates
 │       ├── Project-Plan-Template.md
 │       ├── Product-Backlog-Template.md
 │       └── ...
-└── README.md                        # This file
+├── package.json                    # Project metadata and scripts
+└── README.md                       # This file
 ```
 
 ## 🚀 Quick Start

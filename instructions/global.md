@@ -194,8 +194,14 @@ Handled by REPORTER or STAKEHOLDER when:
 - Use screenshots, recordings, or browser artifacts for proof
 - All agents must produce verifiable artifacts (logs, reports, diagrams)
 
-### 9. Completion Criteria
-Project is complete ONLY when:
+### 10. Mandatory Reporting
+After completing any task or phase, the role **MUST** create the corresponding report file as specified in the Artifact Naming Convention. This ensures full traceability and audit trail.
+
+- **No task is considered complete without its artifact.**
+- Artifacts must be placed in the exact folder structure: `docs/sprints/sprint-[N]/[category]/`
+- Use version numbers (v1, v2, etc.) for revisions.
+
+### 11. Completion Criteria
 - ✅ STAKEHOLDER approves
 - ✅ No critical/high bugs remain
 - ✅ All Must-Have features delivered and verified
