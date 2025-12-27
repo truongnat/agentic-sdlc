@@ -1,6 +1,6 @@
 {
   "name": "template-instructions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simulating a complete Software Development Lifecycle (SDLC) with specialized AI Agents.",
   "main": "index.js",
   "bin": {
