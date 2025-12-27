@@ -60,18 +60,18 @@ npm install -g template-instructions
 create-instructions my-sdlc-project
 ```
 
-This will create a new folder `my-sdlc-project` containing all the instruction files and templates.
+This will create a new folder `my-sdlc-project` containing a `.gemini/instructions` folder with all the instruction files and templates.
 
 ### Manual Setup
-Alternatively, clone this repository and copy the `instructions/` folder to your desired location.
+Alternatively, clone this repository and copy the `.gemini/instructions/` folder to your desired location.
 
 ## 🔧 Setup with Gemini
 
 1. Copy the instruction files to your Gemini workspace:
    ```bash
-   cp -r instructions/ ~/.gemini/instructions/
+   cp -r .gemini/instructions/ ~/.gemini/instructions/
    ```
-   (Or manually copy the `instructions/` folder to `.gemini/instructions/` in your project.)
+   (Or manually copy the `.gemini/instructions/` folder to `.gemini/instructions/` in your project.)
 
 2. Ensure your Gemini configuration points to this instructions directory.
 
@@ -81,15 +81,16 @@ Alternatively, clone this repository and copy the `instructions/` folder to your
 .
 ├── bin/
 │   └── cli.js                      # CLI tool for scaffolding new projects
-├── instructions/
-│   ├── global.md                   # Mandatory global rules and SDLC workflows
-│   ├── usage.md                    # Detailed usage guide and examples
-│   ├── roles/                      # Role-specific instruction definitions
-│   │   ├── pm.md, po.md, sa.md...  # (PM, PO, SA, UIUX, QA, etc.)
-│   └── templates/                  # Standardized document templates
-│       ├── Project-Plan-Template.md
-│       ├── Product-Backlog-Template.md
-│       └── ...
+├── .gemini/
+│   └── instructions/
+│       ├── global.md                   # Mandatory global rules and SDLC workflows
+│       ├── usage.md                    # Detailed usage guide and examples
+│       ├── roles/                      # Role-specific instruction definitions
+│       │   ├── pm.md, po.md, sa.md...  # (PM, PO, SA, UIUX, QA, etc.)
+│       └── templates/                  # Standardized document templates
+│           ├── Project-Plan-Template.md
+│           ├── Product-Backlog-Template.md
+│           └── ...
 ├── package.json                    # Project metadata and scripts
 └── README.md                       # This file
 ```
@@ -124,8 +125,8 @@ Alternatively, clone this repository and copy the `instructions/` folder to your
 
 For detailed instructions, rules, and workflows, please refer to:
 
-*   **[Usage Guide](instructions/usage.md)**: How to use the system, examples, and commands.
-*   **[Global Rules](instructions/global.md)**: The strict SDLC protocols and rules every agent follows.
+*   **[Usage Guide](.gemini/instructions/usage.md)**: How to use the system, examples, and commands.
+*   **[Global Rules](.gemini/instructions/global.md)**: The strict SDLC protocols and rules every agent follows.
 
 ---
 *Maintained by the TeamLifecycle Project Team.*
