@@ -1,0 +1,47 @@
+name: "🐛 Bug Report"
+description: "Report a bug found during testing or QA."
+title: "[BUG] "
+labels: ["type:bug", "status:triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        *Reported by @Tester / @QA*
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Info
+      description: Browser, OS, Version, etc.
+  - type: checkboxes
+    id: roles
+    attributes:
+      label: Recommended Roles for Fix
+      options:
+        - label: "@Dev (Implementation)"
+        - label: "@SA (Architectural issue)"
+        - label: "@UIUX (Visual bug)"

@@ -1,0 +1,28 @@
+name: "🛡️ Security Vulnerability"
+description: "Report a potential security risk."
+title: "[SECURITY] "
+labels: ["type:security", "priority:p0"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        *Reported by @SECA.*
+  - type: textarea
+    id: vulnerability
+    attributes:
+      label: Vulnerability Details
+      description: Describe the potential risk.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Potential Impact
+      description: What could happen if this is exploited?
+    validations:
+      required: true
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Suggested Mitigation
+      description: How should we fix this?

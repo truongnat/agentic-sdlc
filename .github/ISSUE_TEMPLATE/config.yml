@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "📖 Project Documentation"
+    url: "https://github.com/truongnat/template-instructions/tree/main/docs"
+    about: "Read the project documentation for more info."
+  - name: "🤖 AI SDLC Guide"
+    url: "https://github.com/truongnat/template-instructions/blob/main/.agent/usage.md"
+    about: "How to use the AI roles in this project."

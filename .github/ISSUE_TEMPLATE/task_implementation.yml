@@ -1,0 +1,37 @@
+name: "🛠️ Development Task"
+description: "A specific technical task for implementation."
+title: "[TASK] "
+labels: ["type:task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        *Assigned by @PM to @Dev.*
+  - type: dropdown
+    id: role
+    attributes:
+      label: Assign To Role
+      options:
+        - "@Dev"
+        - "@SA"
+        - "@DevOps"
+        - "@UIUX"
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope of Work
+      description: What exactly needs to be implemented?
+    validations:
+      required: true
+  - type: textarea
+    id: technical_notes
+    attributes:
+      label: Technical Notes
+      description: Implementation details, API paths, or library requirements.
+  - type: input
+    id: related_items
+    attributes:
+      label: Related Issues/PRs
+      description: e.g. "Closes #123"
