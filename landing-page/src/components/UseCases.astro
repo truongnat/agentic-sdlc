@@ -1,0 +1,44 @@
+---
+const useCases = [
+  {
+    title: 'Solo Developer',
+    description: 'Build complete applications faster with AI handling planning, design, testing, and documentation',
+    code: '/auto Create a SaaS platform\n# Complete in days, not weeks',
+    icon: '👤'
+  },
+  {
+    title: 'Team Project',
+    description: 'Consistent workflow and quality across your team with shared knowledge and automated processes',
+    code: 'agentic-sdlc ide all\nagentic-sdlc init-kb\n# Shared workflow',
+    icon: '👥'
+  },
+  {
+    title: 'Existing Project',
+    description: 'Add SDLC automation to any existing codebase without disrupting your current workflow',
+    code: 'agentic-sdlc install\nagentic-sdlc ide cursor\n# Enhance existing projects',
+    icon: '🔧'
+  }
+];
+---
+
+<section id="use-cases" class="section-container bg-gray-50">
+  <div class="text-center mb-16">
+    <h2 class="text-4xl sm:text-5xl font-bold mb-4">Built For Every Scenario</h2>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Whether you're solo or in a team, starting fresh or enhancing existing projects
+    </p>
+  </div>
+  
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    {useCases.map((useCase) => (
+      <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-shadow">
+        <div class="text-5xl mb-4">{useCase.icon}</div>
+        <h3 class="text-2xl font-bold mb-3">{useCase.title}</h3>
+        <p class="text-gray-600 mb-6 leading-relaxed">{useCase.description}</p>
+        <div class="bg-gray-900 rounded-lg p-4">
+          <pre class="text-sm font-mono text-green-400"><code>{useCase.code}</code></pre>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

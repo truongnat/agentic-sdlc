@@ -1,0 +1,53 @@
+---
+const features = [
+  {
+    icon: '🤖',
+    title: '12 AI Roles',
+    description: 'Complete SDLC team: PM, SA, UI/UX, QA, Security, Dev, DevOps, Tester, Reporter, Stakeholder, PO, Orchestrator'
+  },
+  {
+    icon: '⚡',
+    title: 'Auto Workflow',
+    description: 'Full automation or manual control. Let AI handle the entire development lifecycle or guide it step-by-step'
+  },
+  {
+    icon: '🧠',
+    title: 'Knowledge Base',
+    description: 'Learn from past challenges. Automatically capture and reuse solutions to complex problems'
+  },
+  {
+    icon: '🎨',
+    title: 'IDE Integration',
+    description: 'Works with Cursor, GitHub Copilot, Windsurf, Cline, and Aider. Use slash commands in your favorite IDE'
+  },
+  {
+    icon: '📚',
+    title: '16 Templates',
+    description: 'Professional documentation templates for plans, designs, reports, and more. Enterprise-ready from day one'
+  },
+  {
+    icon: '🌐',
+    title: 'All Platforms',
+    description: 'Web, Mobile, Desktop, CLI, API, Embedded. One workflow for every type of software project'
+  }
+];
+---
+
+<section id="features" class="section-container bg-white">
+  <div class="text-center mb-16">
+    <h2 class="text-4xl sm:text-5xl font-bold mb-4">Everything You Need</h2>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      A complete SDLC toolkit that adapts to your workflow
+    </p>
+  </div>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {features.map((feature) => (
+      <div class="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-shadow border border-gray-200 hover:border-primary">
+        <div class="text-5xl mb-4">{feature.icon}</div>
+        <h3 class="text-2xl font-bold mb-3">{feature.title}</h3>
+        <p class="text-gray-600 leading-relaxed">{feature.description}</p>
+      </div>
+    ))}
+  </div>
+</section>

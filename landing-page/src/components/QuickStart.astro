@@ -1,0 +1,60 @@
+---
+const steps = [
+  {
+    number: '1',
+    title: 'Install',
+    code: 'npm install -g agentic-sdlc',
+    description: 'Install the CLI globally'
+  },
+  {
+    number: '2',
+    title: 'Create Project',
+    code: 'agentic-sdlc create my-project\ncd my-project',
+    description: 'Initialize a new project'
+  },
+  {
+    number: '3',
+    title: 'Setup IDE',
+    code: 'agentic-sdlc ide cursor',
+    description: 'Configure your IDE integration'
+  },
+  {
+    number: '4',
+    title: 'Start Building',
+    code: '/pm Build a todo app with authentication',
+    description: 'Let AI handle the rest'
+  }
+];
+---
+
+<section id="quick-start" class="section-container bg-white">
+  <div class="text-center mb-16">
+    <h2 class="text-4xl sm:text-5xl font-bold mb-4">Get Started in Minutes</h2>
+    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+      Four simple steps to transform your development workflow
+    </p>
+  </div>
+  
+  <div class="max-w-4xl mx-auto space-y-8">
+    {steps.map((step) => (
+      <div class="flex flex-col md:flex-row gap-6 items-start">
+        <div class="flex-shrink-0 w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold">
+          {step.number}
+        </div>
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold mb-2">{step.title}</h3>
+          <p class="text-gray-600 mb-4">{step.description}</p>
+          <div class="bg-gray-900 rounded-lg p-4">
+            <pre class="text-sm font-mono text-green-400"><code>{step.code}</code></pre>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+  
+  <div class="text-center mt-12">
+    <a href="https://github.com/truongnat/agentic-sdlc#readme" target="_blank" class="btn-primary text-lg">
+      Read Full Documentation →
+    </a>
+  </div>
+</section>

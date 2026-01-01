@@ -38,7 +38,16 @@ ALL project artifacts MUST be created in the project workspace with organized st
 | Global | `docs/global/reports/` | `Final-Project-Report.md`, `Final-Approval-Report.md` | REPORTER, STAKEHOLDER |
 | Global | `docs/global/` | `Master-Documentation.md` | REPORTER |
 
-**FORBIDDEN:** `.agent/` directory (reserved for instructions only)
+**FORBIDDEN LOCATIONS:**
+- `.agent/` directory (reserved for instructions only)
+- `CHANGELOG.md` in project root (exists only as template in `.agent/templates/`)
+
+## ⚠️ CHANGELOG RULE
+**CRITICAL:** Do NOT create or update `CHANGELOG.md` in the project root.
+- CHANGELOG.md exists ONLY as a template in `.agent/templates/`
+- All project changes are documented in sprint-specific reports
+- Use `Phase-Report-Sprint-[N]-v*.md` for sprint summaries
+- Use `Final-Project-Report.md` for overall project changelog
 
 ## Mandatory Documentation Tags
 Every action must be tagged with appropriate hashtags:

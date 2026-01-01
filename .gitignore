@@ -1,2 +1,5 @@
 node_modules/
 .env
+
+# Forbidden files (should only exist as templates)
+/CHANGELOG.md

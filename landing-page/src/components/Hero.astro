@@ -1,0 +1,61 @@
+---
+---
+
+<section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 text-white overflow-hidden">
+  <div class="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+  
+  <div class="section-container relative z-10">
+    <div class="text-center max-w-4xl mx-auto">
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in">
+        Transform Your IDE Into a <span class="text-accent">Full SDLC Team</span>
+      </h1>
+      
+      <p class="text-xl sm:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
+        12 specialized AI roles, automated workflows, and knowledge management. Build faster, smarter, better.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a href="#quick-start" class="btn-primary text-lg">
+          Get Started →
+        </a>
+        <a href="https://github.com/truongnat/agentic-sdlc" target="_blank" class="btn-secondary text-lg bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+          View on GitHub
+        </a>
+      </div>
+      
+      <div class="bg-gray-900/50 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto border border-white/10">
+        <pre class="text-left text-sm sm:text-base font-mono text-green-400"><code><span class="text-gray-400"># Install globally</span>
+npm install -g agentic-sdlc
+
+<span class="text-gray-400"># Create your project</span>
+agentic-sdlc create my-app
+
+<span class="text-gray-400"># Start building with AI</span>
+/pm Build a todo app with auth</code></pre>
+      </div>
+    </div>
+  </div>
+  
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>
+
+<style>
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 1s ease-out;
+  }
+</style>
