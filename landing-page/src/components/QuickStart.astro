@@ -4,57 +4,105 @@ const steps = [
     number: '1',
     title: 'Install',
     code: 'npm install -g agentic-sdlc',
-    description: 'Install the CLI globally'
+    description: 'Install the CLI globally',
+    gradient: 'from-blue-500 to-cyan-500'
   },
   {
     number: '2',
     title: 'Create Project',
     code: 'agentic-sdlc create my-project\ncd my-project',
-    description: 'Initialize a new project'
+    description: 'Initialize a new project',
+    gradient: 'from-purple-500 to-pink-500'
   },
   {
     number: '3',
     title: 'Setup IDE',
     code: 'agentic-sdlc ide cursor',
-    description: 'Configure your IDE integration'
+    description: 'Configure your IDE integration',
+    gradient: 'from-pink-500 to-rose-500'
   },
   {
     number: '4',
     title: 'Start Building',
     code: '/pm Build a todo app with authentication',
-    description: 'Let AI handle the rest'
+    description: 'Let AI handle the rest',
+    gradient: 'from-green-500 to-emerald-500'
   }
 ];
 ---
 
-<section id="quick-start" class="section-container bg-white">
-  <div class="text-center mb-16">
-    <h2 class="text-4xl sm:text-5xl font-bold mb-4">Get Started in Minutes</h2>
-    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-      Four simple steps to transform your development workflow
-    </p>
+<section id="quick-start" class="section-container relative">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute w-96 h-96 bg-green-500/10 rounded-full blur-3xl" style="top: 50%; left: 50%; transform: translate(-50%, -50%);"></div>
   </div>
   
-  <div class="max-w-4xl mx-auto space-y-8">
-    {steps.map((step) => (
-      <div class="flex flex-col md:flex-row gap-6 items-start">
-        <div class="flex-shrink-0 w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold">
-          {step.number}
-        </div>
-        <div class="flex-1">
-          <h3 class="text-2xl font-bold mb-2">{step.title}</h3>
-          <p class="text-gray-600 mb-4">{step.description}</p>
-          <div class="bg-gray-900 rounded-lg p-4">
-            <pre class="text-sm font-mono text-green-400"><code>{step.code}</code></pre>
+  <div class="relative z-10">
+    <!-- Section header -->
+    <div class="text-center mb-20 animate-slide-up">
+      <h2 class="text-5xl sm:text-6xl font-black mb-6">
+        <span class="gradient-text">Get Started in Minutes</span>
+      </h2>
+      <p class="text-xl text-blue-200 max-w-2xl mx-auto">
+        Four simple steps to transform your development workflow
+      </p>
+    </div>
+    
+    <!-- Steps -->
+    <div class="max-w-4xl mx-auto space-y-8">
+      {steps.map((step, index) => (
+        <div 
+          class="flex flex-col md:flex-row gap-6 items-start animate-slide-up"
+          style={`animation-delay: ${index * 0.15}s;`}
+        >
+          <!-- Step number with gradient -->
+          <div class={`flex-shrink-0 w-20 h-20 bg-gradient-to-br ${step.gradient} rounded-2xl flex items-center justify-center text-3xl font-black text-white shadow-lg hover:scale-110 transition-transform duration-300`}>
+            {step.number}
+          </div>
+          
+          <!-- Step content -->
+          <div class="flex-1">
+            <h3 class="text-3xl font-bold mb-2 hover:gradient-text transition-all duration-300">
+              {step.title}
+            </h3>
+            <p class="text-blue-200 mb-4 text-lg">{step.description}</p>
+            
+            <!-- Code block with copy button -->
+            <div class="code-block group">
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex gap-2">
+                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                </div>
+                <button 
+                  class="text-gray-400 hover:text-white transition-colors text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100"
+                  onclick={`navigator.clipboard.writeText('${step.code.replace(/\n/g, '\\n')}'); this.innerHTML = '✓ Copied!'; setTimeout(() => this.innerHTML = '📋 Copy', 2000)`}
+                >
+                  📋 Copy
+                </button>
+              </div>
+              <pre class="text-sm overflow-x-auto"><code class="text-green-400">{step.code}</code></pre>
+            </div>
           </div>
         </div>
-      </div>
-    ))}
-  </div>
-  
-  <div class="text-center mt-12">
-    <a href="https://github.com/truongnat/agentic-sdlc#readme" target="_blank" class="btn-primary text-lg">
-      Read Full Documentation →
-    </a>
+      ))}
+    </div>
+    
+    <!-- Bottom CTA -->
+    <div class="text-center mt-16 space-y-6 animate-slide-up" style="animation-delay: 0.8s;">
+      <a href="https://github.com/truongnat/agentic-sdlc#readme" target="_blank" class="btn-primary inline-block">
+        <span class="relative z-10 flex items-center gap-2">
+          Read Full Documentation
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+          </svg>
+        </span>
+      </a>
+      
+      <p class="text-blue-300 text-sm">
+        Need help? Check out our <a href="https://github.com/truongnat/agentic-sdlc/issues" class="text-blue-400 hover:text-blue-300 underline">support forum</a>
+      </p>
+    </div>
   </div>
 </section>

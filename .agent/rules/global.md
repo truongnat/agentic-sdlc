@@ -75,6 +75,8 @@ This document defines the mandatory rules, conventions, and lifecycle flow that 
    - Covers: Jira-style task tracking, atomic commits, Definition of Done.
 3. **Knowledge Base:** `.agent/rules/knowledge-base.md`
    - Covers: When and how to create knowledge entries.
+4. **Auto-Learning System:** `.agent/rules/auto-learning.md`
+   - Covers: Automatic knowledge capture from tasks, issues, and bug fixes.
 
 ---
 

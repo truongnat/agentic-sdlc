@@ -3,51 +3,104 @@ const features = [
   {
     icon: '🤖',
     title: '12 AI Roles',
-    description: 'Complete SDLC team: PM, SA, UI/UX, QA, Security, Dev, DevOps, Tester, Reporter, Stakeholder, PO, Orchestrator'
+    description: 'Complete SDLC team: PM, SA, UI/UX, QA, Security, Dev, DevOps, Tester, Reporter, Stakeholder, PO, Orchestrator',
+    gradient: 'from-blue-500 to-cyan-500'
   },
   {
     icon: '⚡',
     title: 'Auto Workflow',
-    description: 'Full automation or manual control. Let AI handle the entire development lifecycle or guide it step-by-step'
+    description: 'Full automation or manual control. Let AI handle the entire development lifecycle or guide it step-by-step',
+    gradient: 'from-purple-500 to-pink-500'
   },
   {
     icon: '🧠',
     title: 'Knowledge Base',
-    description: 'Learn from past challenges. Automatically capture and reuse solutions to complex problems'
+    description: 'Learn from past challenges. Automatically capture and reuse solutions to complex problems',
+    gradient: 'from-cyan-500 to-blue-500'
   },
   {
     icon: '🎨',
     title: 'IDE Integration',
-    description: 'Works with Cursor, GitHub Copilot, Windsurf, Cline, and Aider. Use slash commands in your favorite IDE'
+    description: 'Works with Cursor, GitHub Copilot, Windsurf, Cline, and Aider. Use slash commands in your favorite IDE',
+    gradient: 'from-pink-500 to-rose-500'
   },
   {
     icon: '📚',
     title: '16 Templates',
-    description: 'Professional documentation templates for plans, designs, reports, and more. Enterprise-ready from day one'
+    description: 'Professional documentation templates for plans, designs, reports, and more. Enterprise-ready from day one',
+    gradient: 'from-orange-500 to-yellow-500'
   },
   {
     icon: '🌐',
     title: 'All Platforms',
-    description: 'Web, Mobile, Desktop, CLI, API, Embedded. One workflow for every type of software project'
+    description: 'Web, Mobile, Desktop, CLI, API, Embedded. One workflow for every type of software project',
+    gradient: 'from-green-500 to-emerald-500'
   }
 ];
 ---
 
-<section id="features" class="section-container bg-white">
-  <div class="text-center mb-16">
-    <h2 class="text-4xl sm:text-5xl font-bold mb-4">Everything You Need</h2>
-    <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-      A complete SDLC toolkit that adapts to your workflow
-    </p>
+<section id="features" class="section-container relative">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" style="top: 20%; right: 10%;"></div>
+    <div class="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" style="bottom: 20%; left: 10%;"></div>
   </div>
   
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    {features.map((feature) => (
-      <div class="bg-gray-50 rounded-xl p-8 hover:shadow-xl transition-shadow border border-gray-200 hover:border-primary">
-        <div class="text-5xl mb-4">{feature.icon}</div>
-        <h3 class="text-2xl font-bold mb-3">{feature.title}</h3>
-        <p class="text-gray-600 leading-relaxed">{feature.description}</p>
-      </div>
-    ))}
+  <div class="relative z-10">
+    <!-- Section header -->
+    <div class="text-center mb-20 animate-slide-up">
+      <h2 class="text-5xl sm:text-6xl font-black mb-6">
+        <span class="gradient-text">Everything You Need</span>
+      </h2>
+      <p class="text-xl text-blue-200 max-w-2xl mx-auto">
+        A complete SDLC toolkit that adapts to your workflow
+      </p>
+    </div>
+    
+    <!-- Features grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {features.map((feature, index) => (
+        <div 
+          class="glass-card group cursor-pointer animate-slide-up"
+          style={`animation-delay: ${index * 0.1}s;`}
+        >
+          <!-- Icon with gradient background -->
+          <div class={`w-20 h-20 rounded-2xl bg-gradient-to-br ${feature.gradient} flex items-center justify-center text-4xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+            {feature.icon}
+          </div>
+          
+          <!-- Title with gradient on hover -->
+          <h3 class="text-2xl font-bold mb-4 group-hover:gradient-text transition-all duration-300">
+            {feature.title}
+          </h3>
+          
+          <!-- Description -->
+          <p class="text-blue-200 leading-relaxed">
+            {feature.description}
+          </p>
+          
+          <!-- Hover indicator -->
+          <div class="mt-6 flex items-center gap-2 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span class="text-sm font-medium">Learn more</span>
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </div>
+          
+          <!-- Gradient border effect -->
+          <div class={`absolute inset-0 rounded-2xl bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none`}></div>
+        </div>
+      ))}
+    </div>
+    
+    <!-- Bottom CTA -->
+    <div class="text-center mt-16 animate-slide-up" style="animation-delay: 0.8s;">
+      <a href="https://github.com/truongnat/agentic-sdlc#features" target="_blank" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors font-medium">
+        <span>Explore all features</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+        </svg>
+      </a>
+    </div>
   </div>
 </section>

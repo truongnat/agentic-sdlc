@@ -1,7 +1,8 @@
 # Knowledge Base Index
 
-**Last Updated:** [YYYY-MM-DD]  
-**Total Entries:** 0
+**Last Updated:** 2026-01-01  
+**Total Entries:** 1  
+**Auto-Generated:** 1 (100%)
 
 ---
 
@@ -9,7 +10,7 @@
 
 | Category | Count | Critical | High | Medium | Low |
 |----------|-------|----------|------|--------|-----|
-| Bugs | 0 | 0 | 0 | 0 | 0 |
+| Bugs | 1 | 0 | 0 | 1 | 0 |
 | Features | 0 | 0 | 0 | 0 | 0 |
 | Architecture | 0 | 0 | 0 | 0 | 0 |
 | Security | 0 | 0 | 0 | 0 | 0 |
@@ -20,15 +21,15 @@
 
 ## 🔥 Most Referenced Entries
 
-1. [No entries yet]
+1. KB-2026-01-01-001 - React Hydration Mismatch (Example)
 
 ---
 
 ## 🆕 Recent Entries
 
-| ID | Date | Title | Category | Severity | Tags |
-|----|------|-------|----------|----------|------|
-| - | - | - | - | - | - |
+| ID | Date | Title | Category | Severity | Tags | Auto |
+|----|------|-------|----------|----------|------|------|
+| KB-2026-01-01-001 | 2026-01-01 | React Hydration Mismatch in Astro | Bug | Medium | #react #astro #hydration | ✅ |
 
 ---
 
@@ -47,7 +48,7 @@
 ### Medium
 | ID | Title | Platform | Technology | Date | Location |
 |----|-------|----------|------------|------|----------|
-| - | - | - | - | - | - |
+| KB-2026-01-01-001 | React Hydration Mismatch | Web | Astro, React | 2026-01-01 | bugs/medium/ |
 
 ### Low
 | ID | Title | Platform | Technology | Date | Location |
@@ -136,7 +137,8 @@
 ## 🔍 Search by Technology
 
 ### Frontend
-- **React:** [No entries]
+- **React:** KB-2026-01-01-001
+- **Astro:** KB-2026-01-01-001
 - **Vue:** [No entries]
 - **Angular:** [No entries]
 - **Svelte:** [No entries]
@@ -178,6 +180,9 @@
 - `#ui-ux` - [0 entries]
 - `#performance` - [0 entries]
 - `#security` - [0 entries]
+- `#hydration` - [1 entry] - KB-2026-01-01-001
+- `#ssr` - [1 entry] - KB-2026-01-01-001
+- `#auto-learned` - [1 entry] - KB-2026-01-01-001
 
 ---
 
@@ -195,7 +200,8 @@
 
 | Date | Action | Entry ID | Updated By |
 |------|--------|----------|------------|
-| [Date] | Index created | - | @REPORTER |
+| 2026-01-01 | Index created | - | @REPORTER |
+| 2026-01-01 | Added example auto-learned entry | KB-2026-01-01-001 | @DEV |
 
 ---
 

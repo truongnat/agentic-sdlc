@@ -8,6 +8,9 @@
 | Author | @[ROLE] |
 | Category | Bug Pattern / Feature Solution / Performance / Security / Architecture |
 | Severity | Critical / High / Medium / Low |
+| Auto-Generated | Yes / No |
+| Source Task | [Task/Issue/Bug ID or N/A] |
+| Sprint | [N] |
 | Project | [Project name or "General"] |
 | Tags | [tag1, tag2, tag3] |
 
