@@ -1,13 +1,13 @@
 # Quick Start Guide
 
-Get started with `create-instructions` in 5 minutes.
+Get started with `agentic-sdlc` in 5 minutes.
 
 ---
 
 ## 🚀 Installation
 
 ```bash
-npm install -g template-instructions
+npm install -g agentic-sdlc
 ```
 
 ---
@@ -17,14 +17,14 @@ npm install -g template-instructions
 ### Step 1: Create Project (30 seconds)
 
 ```bash
-create-instructions create my-project
+agentic-sdlc create my-project
 cd my-project
 ```
 
 ### Step 2: Setup IDE (15 seconds)
 
 ```bash
-create-instructions ide cursor
+agentic-sdlc ide cursor
 ```
 
 ### Step 3: Start Building (Instant)
@@ -81,8 +81,8 @@ After setup, you have:
 ## 📚 Learn More
 
 - **Full Examples:** See `CLI-EXAMPLES.md`
-- **Usage Guide:** `.gemini/instructions/usage.md`
-- **All Commands:** `create-instructions --help`
+- **Usage Guide:** `.agent/usage.md`
+- **All Commands:** `agentic-sdlc --help`
 
 ---
 
@@ -90,13 +90,13 @@ After setup, you have:
 
 ```bash
 # Show all commands
-create-instructions --help
+agentic-sdlc --help
 
 # List available resources
-create-instructions list
+agentic-sdlc list
 
 # Check version
-create-instructions --version
+agentic-sdlc --version
 ```
 
 ---

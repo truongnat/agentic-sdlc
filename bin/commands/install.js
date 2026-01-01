@@ -50,7 +50,7 @@ export async function install(templatePath, options = {}) {
       log.success('Installation complete!');
       console.log(`Location: ${targetPath}`);
       console.log(`\nNext Steps:`);
-      console.log('  • Setup IDE: create-instructions ide cursor');
+      console.log('  • Setup IDE: agentic-sdlc ide cursor');
       console.log('  • Review: .agent/usage.md');
       console.log('  • Start: /pm Build your project\n');
 

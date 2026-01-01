@@ -1,6 +1,6 @@
 # CLI Usage Examples
 
-Complete guide with examples for `create-instructions` CLI tool.
+Complete guide with examples for `agentic-sdlc` CLI tool.
 
 ---
 
@@ -8,10 +8,10 @@ Complete guide with examples for `create-instructions` CLI tool.
 
 ```bash
 # Install globally
-npm install -g template-instructions
+npm install -g agentic-sdlc
 
 # Or use with npx (no installation needed)
-npx template-instructions <command>
+npx agentic-sdlc <command>
 ```
 
 ---
@@ -22,13 +22,13 @@ npx template-instructions <command>
 
 ```bash
 # Create a new project with everything set up
-create-instructions create my-awesome-project
+agentic-sdlc create my-awesome-project
 
 # Navigate to project
 cd my-awesome-project
 
 # Setup IDE integration
-create-instructions ide cursor
+agentic-sdlc ide cursor
 
 # Start building
 # Open IDE and type: /pm Build a todo app
@@ -47,8 +47,8 @@ Location: /path/to/my-awesome-project
 
 Next Steps:
   cd my-awesome-project
-  create-instructions ide cursor
-  • Review .gemini/instructions/usage.md
+  agentic-sdlc ide cursor
+  • Review .agent/usage.md
   • Initialize git repository
   • Start: /pm Build your project
 
@@ -64,10 +64,10 @@ Next Steps:
 cd my-existing-project
 
 # Install instructions
-create-instructions install
+agentic-sdlc install
 
 # Setup IDE
-create-instructions ide cursor
+agentic-sdlc ide cursor
 ```
 
 **Output:**
@@ -79,11 +79,11 @@ create-instructions ide cursor
 → Copying template files...
 ✓ Installation complete!
 
-Location: /path/to/my-existing-project/.gemini
+Location: /path/to/my-existing-project/.agent
 
 Next Steps:
-  • Setup IDE: create-instructions ide cursor
-  • Review: .gemini/instructions/usage.md
+  • Setup IDE: agentic-sdlc ide cursor
+  • Review: .agent/usage.md
   • Start: /pm Build your project
 
 ℹ Completed in 0.42s
@@ -97,19 +97,19 @@ Next Steps:
 
 ```bash
 # Cursor IDE
-create-instructions ide cursor
+agentic-sdlc ide cursor
 
 # GitHub Copilot
-create-instructions ide copilot
+agentic-sdlc ide copilot
 
 # Windsurf Cascade
-create-instructions ide windsurf
+agentic-sdlc ide windsurf
 
 # Cline Extension
-create-instructions ide cline
+agentic-sdlc ide cline
 
 # Aider CLI
-create-instructions ide aider
+agentic-sdlc ide aider
 ```
 
 **Example Output (Cursor):**
@@ -134,7 +134,7 @@ Next Steps:
 ### Setup All IDEs at Once
 
 ```bash
-create-instructions ide all
+agentic-sdlc ide all
 ```
 
 **Output:**
@@ -168,7 +168,7 @@ Next Steps:
 ### Initialize Knowledge Base
 
 ```bash
-create-instructions init-kb
+agentic-sdlc init-kb
 ```
 
 **Output:**
@@ -178,10 +178,10 @@ create-instructions init-kb
 → Creating directory structure...
 ✓ Knowledge base initialized!
 
-Location: /path/to/project/.gemini/instructions/knowledge-base
+Location: /path/to/project/.agent/knowledge-base
 
 Next Steps:
-  • Read: .gemini/instructions/knowledge-base/README.md
+  • Read: .agent/knowledge-base/README.md
   • Use template: Knowledge-Entry-Template.md
   • Search: Check index.md
 
@@ -193,7 +193,7 @@ Next Steps:
 ## 📋 List Available Resources
 
 ```bash
-create-instructions list
+agentic-sdlc list
 ```
 
 **Output:**
@@ -243,11 +243,11 @@ Total: 12 roles, 16 templates
 
 ```bash
 # Step 1: Create project
-create-instructions create wedding-website
+agentic-sdlc create wedding-website
 cd wedding-website
 
 # Step 2: Setup IDE
-create-instructions ide cursor
+agentic-sdlc ide cursor
 
 # Step 3: Initialize git
 git init
@@ -267,13 +267,13 @@ git commit -m "Initial commit with TeamLifecycle"
 cd my-existing-app
 
 # Step 2: Install instructions
-create-instructions install
+agentic-sdlc install
 
 # Step 3: Setup IDE (all at once)
-create-instructions ide all
+agentic-sdlc ide all
 
 # Step 4: Initialize knowledge base
-create-instructions init-kb
+agentic-sdlc init-kb
 
 # Step 5: Commit changes
 git add .
@@ -289,14 +289,14 @@ git commit -m "Add TeamLifecycle SDLC system"
 
 ```bash
 # Team lead sets up template
-create-instructions create team-project
+agentic-sdlc create team-project
 cd team-project
 
 # Setup all IDE integrations for team
-create-instructions ide all
+agentic-sdlc ide all
 
 # Initialize knowledge base for shared learning
-create-instructions init-kb
+agentic-sdlc init-kb
 
 # Commit to repo
 git init
@@ -319,13 +319,13 @@ git push -u origin main
 
 ```bash
 # Overwrite existing installation
-create-instructions install --force
+agentic-sdlc install --force
 
 # Overwrite existing project
-create-instructions create my-project --force
+agentic-sdlc create my-project --force
 
 # Overwrite IDE config
-create-instructions ide cursor --force
+agentic-sdlc ide cursor --force
 ```
 
 ---
@@ -334,10 +334,10 @@ create-instructions ide cursor --force
 
 ```bash
 # Minimal output
-create-instructions install --quiet
+agentic-sdlc install --quiet
 
 # Useful for scripts
-create-instructions ide all -q
+agentic-sdlc ide all -q
 ```
 
 ---
@@ -346,10 +346,10 @@ create-instructions ide all -q
 
 ```bash
 # Detailed output with file counts
-create-instructions install --verbose
+agentic-sdlc install --verbose
 
 # See all operations
-create-instructions create my-project --verbose
+agentic-sdlc create my-project --verbose
 ```
 
 ---
@@ -358,10 +358,10 @@ create-instructions create my-project --verbose
 
 ```bash
 # Force + Verbose
-create-instructions install -f --verbose
+agentic-sdlc install -f --verbose
 
 # Quiet + Force (for automation)
-create-instructions ide all -q -f
+agentic-sdlc ide all -q -f
 ```
 
 ---
@@ -371,9 +371,9 @@ create-instructions ide all -q -f
 ### Show Help
 
 ```bash
-create-instructions --help
-create-instructions -h
-create-instructions help
+agentic-sdlc --help
+agentic-sdlc -h
+agentic-sdlc help
 ```
 
 ---
@@ -381,14 +381,14 @@ create-instructions help
 ### Show Version
 
 ```bash
-create-instructions --version
-create-instructions -v
-create-instructions version
+agentic-sdlc --version
+agentic-sdlc -v
+agentic-sdlc version
 ```
 
 **Output:**
 ```
-create-instructions v1.1.4
+agentic-sdlc v1.1.4
 Simulating a complete Software Development Lifecycle (SDLC) with specialized AI Agents.
 ```
 
@@ -425,10 +425,10 @@ Simulating a complete Software Development Lifecycle (SDLC) with specialized AI 
 
 ```bash
 # If installed globally but not found
-npm install -g template-instructions
+npm install -g agentic-sdlc
 
 # Or use npx
-npx template-instructions install
+npx agentic-sdlc install
 ```
 
 ---
@@ -437,11 +437,11 @@ npx template-instructions install
 
 ```bash
 # On Unix/Mac, use sudo for global install
-sudo npm install -g template-instructions
+sudo npm install -g agentic-sdlc
 
 # Or install without sudo using nvm
 nvm use node
-npm install -g template-instructions
+npm install -g agentic-sdlc
 ```
 
 ---
@@ -450,8 +450,8 @@ npm install -g template-instructions
 
 ```bash
 # Use --force to overwrite
-create-instructions install --force
-create-instructions create my-project --force
+agentic-sdlc install --force
+agentic-sdlc create my-project --force
 ```
 
 ---
@@ -460,7 +460,7 @@ create-instructions create my-project --force
 
 ```bash
 # Re-run IDE setup
-create-instructions ide cursor --force
+agentic-sdlc ide cursor --force
 
 # Restart your IDE after setup
 
@@ -475,7 +475,7 @@ ls -la .github/copilot-instructions.md  # For Copilot
 
 ```
 my-project/
-├── .gemini/
+├── .agent/
 │   └── instructions/
 │       ├── global.md
 │       ├── usage.md
@@ -508,10 +508,10 @@ my-project/
 
 ### Day 1: Setup
 ```bash
-create-instructions create learning-project
+agentic-sdlc create learning-project
 cd learning-project
-create-instructions ide cursor
-# Read: .gemini/instructions/usage.md
+agentic-sdlc ide cursor
+# Read: .agent/usage.md
 ```
 
 ### Day 2: First Project
@@ -530,7 +530,7 @@ create-instructions ide cursor
 
 ### Day 4: Knowledge Base
 ```bash
-create-instructions init-kb
+agentic-sdlc init-kb
 # Document learnings as you encounter challenges
 # /kb-add [topic] when you solve difficult problems
 ```
@@ -549,9 +549,9 @@ create-instructions init-kb
 ### 1. Use Aliases
 ```bash
 # Add to ~/.bashrc or ~/.zshrc
-alias ci='create-instructions'
-alias ci-new='create-instructions create'
-alias ci-ide='create-instructions ide'
+alias ci='agentic-sdlc'
+alias ci-new='agentic-sdlc create'
+alias ci-ide='agentic-sdlc ide'
 
 # Usage
 ci install
@@ -564,9 +564,9 @@ ci-ide cursor
 ### 2. Project Templates
 ```bash
 # Create your own project template
-create-instructions create template-project
+agentic-sdlc create template-project
 cd template-project
-# Customize .gemini/instructions/
+# Customize .agent/
 # Use as base for future projects
 ```
 
@@ -579,10 +579,10 @@ cd template-project
 
 PROJECT_NAME=$1
 
-create-instructions create $PROJECT_NAME
+agentic-sdlc create $PROJECT_NAME
 cd $PROJECT_NAME
-create-instructions ide all
-create-instructions init-kb
+agentic-sdlc ide all
+agentic-sdlc init-kb
 git init
 git add .
 git commit -m "Initial setup with TeamLifecycle"
@@ -602,17 +602,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: npm install -g template-instructions
-      - run: create-instructions install --quiet
-      - run: create-instructions ide all --quiet
+      - run: npm install -g agentic-sdlc
+      - run: agentic-sdlc install --quiet
+      - run: agentic-sdlc ide all --quiet
 ```
 
 ---
 
 ## 📞 Support
 
-- **Documentation:** `.gemini/instructions/usage.md`
-- **Issues:** https://github.com/yourusername/template-instructions/issues
+- **Documentation:** `.agent/usage.md`
+- **Issues:** https://github.com/yourusername/agentic-sdlc/issues
 - **Examples:** This file!
 
 ---
@@ -621,25 +621,25 @@ jobs:
 
 ### Example 1: Solo Developer
 ```bash
-create-instructions create saas-platform
+agentic-sdlc create saas-platform
 cd saas-platform
-create-instructions ide cursor
+agentic-sdlc ide cursor
 # Used /auto mode, completed MVP in 2 days
 ```
 
 ### Example 2: Team of 5
 ```bash
-create-instructions create team-app
-create-instructions ide all
-create-instructions init-kb
+agentic-sdlc create team-app
+agentic-sdlc ide all
+agentic-sdlc init-kb
 # Shared knowledge base, consistent workflow
 # Reduced onboarding time by 70%
 ```
 
 ### Example 3: Open Source Project
 ```bash
-create-instructions install
-create-instructions ide copilot
+agentic-sdlc install
+agentic-sdlc ide copilot
 # Contributors use same workflow
 # Consistent documentation and quality
 ```

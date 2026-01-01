@@ -1,7 +1,7 @@
 # TeamLifecycle Global Rules & Conventions
 (Version 1.4 – Strict IT SDLC Simulation for Google Antigravity)
 
-**Last Updated:** 2025-12-31  
+**Last Updated:** 2026-01-01  
 **Maintainer:** Project Team
 
 ---
@@ -69,11 +69,11 @@ This document defines the mandatory rules, conventions, and lifecycle flow that 
 
 **You MUST refer to these additional rule files for specific domains:**
 
-1. **Artifacts & Naming:** `d:\dev\template-intructions\.agent\rules\artifacts.md`
+1. **Artifacts & Naming:** `.agent/rules/artifacts.md`
    - Covers: Naming conventions, folder structure, forbidden locations.
-2. **Git & Task Workflow:** `d:\dev\template-intructions\.agent\rules\git-workflow.md`
+2. **Git & Task Workflow:** `.agent/rules/git-workflow.md`
    - Covers: Jira-style task tracking, atomic commits, Definition of Done.
-3. **Knowledge Base:** `d:\dev\template-intructions\.agent\rules\knowledge-base.md`
+3. **Knowledge Base:** `.agent/rules/knowledge-base.md`
    - Covers: When and how to create knowledge entries.
 
 ---
@@ -147,8 +147,8 @@ Use this at the end of **every artifact**:
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 1.4 | 2025-12-31 | Split large rules into artifacts.md, git-workflow.md, knowledge-base.md |
-| 1.3 | 2025-12-31 | Added Task Management & Atomic Git Commit Rules |
-| 1.2 | 2025-12-31 | Migrated to Native Agent structure (.agent/). Updated paths. |
+| 1.4 | 2026-01-01 | Split large rules into artifacts.md, git-workflow.md, knowledge-base.md |
+| 1.3 | 2026-01-01 | Added Task Management & Atomic Git Commit Rules |
+| 1.2 | 2026-01-01 | Migrated to Native Agent structure (.agent/). Updated paths. |
 | 1.1 | 2025-12-23 | Added PO role, new tags (#product-owner, #backlog, #blocked, #hotfix, #rollback, #deployed-*), Definition of Done, Cross-Role Dependencies diagram, Incident/Hotfix workflow, Changelog |
 | 1.0 | Initial | Initial release with 10 roles and core SDLC flow |

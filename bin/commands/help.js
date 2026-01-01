@@ -5,10 +5,10 @@ import { colors } from '../utils/colors.js';
  */
 export function showHelp(packageJson) {
   console.log(`
-${colors.bright}${colors.cyan}create-instructions${colors.reset} ${colors.dim}v${packageJson.version}${colors.reset}
+${colors.bright}${colors.cyan}agentic-sdlc${colors.reset} ${colors.dim}v${packageJson.version}${colors.reset}
 
 ${colors.bright}USAGE${colors.reset}
-  ${colors.cyan}create-instructions${colors.reset} ${colors.yellow}<command>${colors.reset} ${colors.dim}[options]${colors.reset}
+  ${colors.cyan}agentic-sdlc${colors.reset} ${colors.yellow}<command>${colors.reset} ${colors.dim}[options]${colors.reset}
 
 ${colors.bright}COMMANDS${colors.reset}
   ${colors.yellow}install${colors.reset}              Install instructions into current directory
@@ -29,22 +29,22 @@ ${colors.bright}OPTIONS${colors.reset}
 
 ${colors.bright}EXAMPLES${colors.reset}
   ${colors.dim}# Install in current directory${colors.reset}
-  ${colors.cyan}create-instructions${colors.reset} install
+  ${colors.cyan}agentic-sdlc${colors.reset} install
 
   ${colors.dim}# Create new project${colors.reset}
-  ${colors.cyan}create-instructions${colors.reset} create my-project
+  ${colors.cyan}agentic-sdlc${colors.reset} create my-project
 
   ${colors.dim}# Setup Cursor IDE integration${colors.reset}
-  ${colors.cyan}create-instructions${colors.reset} ide cursor
+  ${colors.cyan}agentic-sdlc${colors.reset} ide cursor
 
   ${colors.dim}# Setup all IDE integrations${colors.reset}
-  ${colors.cyan}create-instructions${colors.reset} ide all
+  ${colors.cyan}agentic-sdlc${colors.reset} ide all
 
   ${colors.dim}# Initialize knowledge base${colors.reset}
-  ${colors.cyan}create-instructions${colors.reset} init-kb
+  ${colors.cyan}agentic-sdlc${colors.reset} init-kb
 
   ${colors.dim}# List available templates${colors.reset}
-  ${colors.cyan}create-instructions${colors.reset} list
+  ${colors.cyan}agentic-sdlc${colors.reset} list
 
 ${colors.bright}IDE INTEGRATIONS${colors.reset}
   ${colors.dim}cursor${colors.reset}      - Cursor IDE (.cursorrules)
@@ -64,6 +64,6 @@ ${colors.bright}DOCUMENTATION${colors.reset}
  * Display version information
  */
 export function showVersion(packageJson) {
-  console.log(`${colors.cyan}create-instructions${colors.reset} ${colors.bright}v${packageJson.version}${colors.reset}`);
+  console.log(`${colors.cyan}agentic-sdlc${colors.reset} ${colors.bright}v${packageJson.version}${colors.reset}`);
   console.log(`${colors.dim}${packageJson.description}${colors.reset}`);
 }

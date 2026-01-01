@@ -1,4 +1,4 @@
-# Template Instructions
+# Agentic SDLC
 
 > Simulating a complete Software Development Lifecycle (SDLC) with specialized AI Agents.
 
@@ -18,27 +18,28 @@ Transform your IDE into a full SDLC team with 12 specialized AI roles, automated
 
 ```bash
 # Install
-npm install -g template-instructions
+npm install -g agentic-sdlc
 
 # Create project
-create-instructions create my-project
+agentic-sdlc create my-project
 cd my-project
 
 # Setup IDE
-create-instructions ide cursor
+agentic-sdlc ide cursor
 
 # Start building (in IDE)
 /pm Build a todo app with authentication
 ```
 
-**That's it!** See [QUICK-START.md](QUICK-START.md) for details.
+**That's it!** See [Quick Start](docs/guides/QUICK-START.md) for details.
 
 ## 📖 Documentation
 
-- **Quick Start:** [QUICK-START.md](QUICK-START.md) - Get started in 5 minutes
-- **CLI Examples:** [CLI-EXAMPLES.md](CLI-EXAMPLES.md) - Complete usage guide
-- **Usage Guide:** `.gemini/instructions/usage.md` - Full documentation
-- **IDE Integration:** `.gemini/instructions/ide-integration/README.md`
+- **[Documentation Outline](docs/OUTLINE.md)** - Central hub for all guides
+- **Quick Start:** [QUICK-START.md](docs/guides/QUICK-START.md) - Get started in 5 minutes
+- **CLI Examples:** [CLI-EXAMPLES.md](docs/guides/CLI-EXAMPLES.md) - Complete usage guide
+- **Usage Guide:** `.agent/usage.md` - Full documentation
+- **IDE Integration:** `.agent/ide-integration/README.md`
 
 ## 🎯 Use Cases
 
@@ -50,27 +51,27 @@ create-instructions ide cursor
 
 ### Team Project
 ```bash
-create-instructions ide all
-create-instructions init-kb
+agentic-sdlc ide all
+agentic-sdlc init-kb
 # Shared workflow, consistent quality
 ```
 
 ### Existing Project
 ```bash
-create-instructions install
-create-instructions ide cursor
+agentic-sdlc install
+agentic-sdlc ide cursor
 # Add SDLC to any project
 ```
 
 ## 🔧 CLI Commands
 
 ```bash
-create-instructions install              # Install in current directory
-create-instructions create <name>        # Create new project
-create-instructions ide <cursor|all>     # Setup IDE integration
-create-instructions init-kb              # Initialize knowledge base
-create-instructions list                 # List templates & roles
-create-instructions --help               # Show help
+agentic-sdlc install              # Install in current directory
+agentic-sdlc create <name>        # Create new project
+agentic-sdlc ide <cursor|all>     # Setup IDE integration
+agentic-sdlc init-kb              # Initialize knowledge base
+agentic-sdlc list                 # List templates & roles
+agentic-sdlc --help               # Show help
 ```
 
 ## 🎨 IDE Slash Commands
@@ -92,7 +93,7 @@ After setup, use these in your IDE:
 
 ```
 my-project/
-├── .gemini/instructions/
+├── .agent/
 │   ├── roles/              # 12 AI roles
 │   ├── templates/          # 16 templates
 │   ├── knowledge-base/     # Learning system
@@ -104,7 +105,7 @@ my-project/
 
 ## 🌟 Examples
 
-See [CLI-EXAMPLES.md](CLI-EXAMPLES.md) for:
+See [CLI-EXAMPLES.md](docs/guides/CLI-EXAMPLES.md) for:
 - Real-world workflows
 - Team collaboration
 - Automation scripts
@@ -130,6 +131,6 @@ MIT
 
 ## 🔗 Links
 
-- **Repository:** https://github.com/truongnat/template-instructions
-- **Issues:** https://github.com/truongnat/template-instructions/issues
-- **NPM:** https://www.npmjs.com/package/template-instructions
+- **Repository:** https://github.com/truongnat/agentic-sdlc
+- **Issues:** https://github.com/truongnat/agentic-sdlc/issues
+- **NPM:** https://www.npmjs.com/package/agentic-sdlc

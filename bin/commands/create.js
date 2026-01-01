@@ -50,7 +50,7 @@ export async function createProject(templatePath, projectName, options = {}) {
       {
         name: projectName,
         version: '1.0.0',
-        description: 'Project created with template-instructions',
+        description: 'Project created with agentic-sdlc',
         main: 'index.js',
         scripts: {
           test: 'echo "Error: no test specified" && exit 1',
@@ -62,7 +62,7 @@ export async function createProject(templatePath, projectName, options = {}) {
     // Create README
     await fs.writeFile(
       path.join(targetPath, 'README.md'),
-      `# ${projectName}\n\nProject created with template-instructions.\n\n## Getting Started\n\n1. Review instructions: \`.agent/usage.md\`\n2. Setup IDE: \`create-instructions ide cursor\`\n3. Start planning: \`/pm Build your project\`\n\n## Documentation\n\nAll project documentation is in \`docs/\` folder organized by sprints.\n`
+      `# ${projectName}\n\nProject created with agentic-sdlc.\n\n## Getting Started\n\n1. Review instructions: \`.agent/usage.md\`\n2. Setup IDE: \`agentic-sdlc ide cursor\`\n3. Start planning: \`/pm Build your project\`\n\n## Documentation\n\nAll project documentation is in \`docs/\` folder organized by sprints.\n`
     );
 
     // Create .gitignore
@@ -77,7 +77,7 @@ export async function createProject(templatePath, projectName, options = {}) {
       console.log(`Location: ${targetPath}`);
       console.log(`\nNext Steps:`);
       console.log(`  ${colors.cyan}cd ${projectName}${colors.reset}`);
-      console.log('  create-instructions ide cursor');
+      console.log('  agentic-sdlc ide cursor');
       console.log('  • Review .agent/usage.md');
       console.log('  • Initialize git repository');
       console.log('  • Start: /pm Build your project\n');

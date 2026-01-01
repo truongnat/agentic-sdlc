@@ -1,7 +1,7 @@
 # 📚 TeamLifecycle Instructions - Usage Guide
 
 > **Version:** 1.0  
-> **Last Updated:** 2025-12-23
+> **Last Updated:** 2026-01-01
 
 ---
 
@@ -23,7 +23,7 @@ This instruction set simulates a **complete Software Development Lifecycle (SDLC
 ## 📁 Directory Structure
 
 ```
-.gemini/instructions/
+.agent/
 ├── global.md                    # Global rules (mandatory)
 ├── usage.md                     # This usage guide
 ├── roles/                       # Team roles
@@ -284,7 +284,7 @@ docs/
 | **Reports** | Phase-Report-Sprint-[N]-v*.md | REPORTER | `docs/sprints/sprint-[N]/reports/` |
 | **Global** | Master-Documentation.md<br>Final-Project-Report.md<br>Final-Approval-Report.md | REPORTER, STAKEHOLDER | `docs/global/` and `docs/global/reports/` |
 
-> ⚠️ **CRITICAL:** All artifacts are in `docs/`, NEVER in `.gemini/` (reserved for instructions only)
+> ⚠️ **CRITICAL:** All artifacts are in `docs/`, NEVER in `.agent/` (reserved for instructions only)
 
 ---
 
@@ -489,7 +489,7 @@ Tech preference: Node.js/Express or Python/FastAPI
 
 ## 📚 Available Templates
 
-All templates are located in `.gemini/instructions/templates/`:
+All templates are located in `.agent/templates/`:
 
 ### Planning Templates
 - `Project-Plan-Template.md` - Initial project planning
@@ -542,7 +542,7 @@ A memory system that stores lessons learned, bug patterns, and difficult feature
 - Dealing with platform-specific issues
 
 ### How to Use
-1. **Search:** Check `.gemini/instructions/knowledge-base/index.md`
+1. **Search:** Check `.agent/knowledge-base/index.md`
 2. **Browse:** Navigate by category (bugs, features, architecture, etc.)
 3. **Create:** Use `Knowledge-Entry-Template.md` when needed
 4. **Update:** Keep index.md current

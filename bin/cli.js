@@ -57,7 +57,7 @@ async function main() {
       const projectName = filteredArgs[1];
       if (!projectName) {
         log.error('Project name is required');
-        console.log('Usage: create-instructions create <project-name>');
+        console.log('Usage: agentic-sdlc create <project-name>');
         process.exit(1);
       }
       await createProject(templatePath, projectName, options);
@@ -71,7 +71,7 @@ async function main() {
       const ideName = filteredArgs[1];
       if (!ideName) {
         log.error('IDE name is required');
-        console.log('Usage: create-instructions ide <cursor|copilot|windsurf|cline|aider|all>');
+        console.log('Usage: agentic-sdlc ide <cursor|copilot|windsurf|cline|aider|all>');
         process.exit(1);
       }
       await setupIDE(templatePath, ideName, options);
@@ -83,7 +83,7 @@ async function main() {
 
     default:
       log.error(`Unknown command: ${command}`);
-      console.log('Run create-instructions --help for usage information');
+      console.log('Run agentic-sdlc --help for usage information');
       process.exit(1);
   }
 }

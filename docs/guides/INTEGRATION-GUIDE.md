@@ -27,7 +27,7 @@ cd /path/to/your-existing-project
 ### Step 2: Install Instructions
 
 ```bash
-create-instructions install
+agentic-sdlc install
 ```
 
 **Output:**
@@ -39,20 +39,20 @@ create-instructions install
 → Copying template files...
 ✓ Installation complete!
 
-Location: /path/to/your-project/.gemini
+Location: /path/to/your-project/.agent
 
 Next Steps:
-  • Setup IDE: create-instructions ide cursor
-  • Review: .gemini/instructions/usage.md
+  • Setup IDE: agentic-sdlc ide cursor
+  • Review: .agent/usage.md
   • Start: /pm Build your project
 ```
 
 ### Step 3: Setup IDE
 
 ```bash
-create-instructions ide cursor
+agentic-sdlc ide cursor
 # or
-create-instructions ide all
+agentic-sdlc ide all
 ```
 
 **That's it!** You can now use `/pm`, `/dev`, `/auto` commands in your IDE.
@@ -63,7 +63,7 @@ create-instructions ide all
 
 ```
 your-existing-project/
-├── .gemini/                    # NEW - Instructions folder
+├── .agent                    # NEW - Instructions folder
 │   └── instructions/
 │       ├── roles/              # 12 AI roles
 │       ├── templates/          # 16 templates
@@ -93,8 +93,8 @@ your-existing-project/
 cd ~/projects/my-blog
 
 # Add TeamLifecycle
-create-instructions install
-create-instructions ide cursor
+agentic-sdlc install
+agentic-sdlc ide cursor
 
 # Start improving
 # In IDE: /pm Review current architecture and suggest improvements
@@ -112,12 +112,12 @@ git clone https://github.com/team/project.git
 cd project
 
 # Add TeamLifecycle
-create-instructions install
-create-instructions ide all
-create-instructions init-kb
+agentic-sdlc install
+agentic-sdlc ide all
+agentic-sdlc init-kb
 
 # Commit changes
-git add .gemini .cursorrules .github/copilot-instructions.md
+git add .agent .cursorrules .github/copilot-instructions.md
 git commit -m "Add TeamLifecycle SDLC system"
 git push
 
@@ -135,9 +135,9 @@ git push
 cd ~/old-projects/legacy-app
 
 # Add TeamLifecycle
-create-instructions install
-create-instructions ide cursor
-create-instructions init-kb
+agentic-sdlc install
+agentic-sdlc ide cursor
+agentic-sdlc init-kb
 
 # Start modernization
 # In IDE: /pm Analyze current codebase and create modernization plan
@@ -154,14 +154,14 @@ create-instructions init-kb
 cd ~/oss/my-library
 
 # Add TeamLifecycle
-create-instructions install
-create-instructions ide copilot
+agentic-sdlc install
+agentic-sdlc ide copilot
 
 # Add to .gitignore (optional - keep instructions private)
-echo ".gemini/" >> .gitignore
+echo ".agent" >> .gitignore
 
 # Or commit for contributors
-git add .gemini .github/copilot-instructions.md
+git add .agent .github/copilot-instructions.md
 git commit -m "Add AI-powered SDLC workflow"
 
 # Contributors can now use consistent workflow
@@ -176,14 +176,14 @@ git commit -m "Add AI-powered SDLC workflow"
 cd ~/projects/monorepo
 
 # Install at root
-create-instructions install
-create-instructions ide all
+agentic-sdlc install
+agentic-sdlc ide all
 
 # Or install per package
 cd packages/frontend
-create-instructions install
+agentic-sdlc install
 cd ../backend
-create-instructions install
+agentic-sdlc install
 
 # Use from anywhere in monorepo
 # In IDE: /pm Review frontend architecture
@@ -201,13 +201,13 @@ create-instructions install
 cd your-project
 
 # Install instructions
-create-instructions install
+agentic-sdlc install
 
 # Setup only specific IDE
-create-instructions ide cursor
+agentic-sdlc ide cursor
 
 # Skip knowledge base (add later if needed)
-# create-instructions init-kb
+# agentic-sdlc init-kb
 ```
 
 ---
@@ -216,16 +216,16 @@ create-instructions ide cursor
 
 ```bash
 # Install
-create-instructions install
+agentic-sdlc install
 
 # Customize roles
-nano .gemini/instructions/roles/dev.md
+nano .agent/roles/dev.md
 
 # Customize templates
-nano .gemini/instructions/templates/Development-Log-Template.md
+nano .agent/templates/Development-Log-Template.md
 
 # Commit customizations
-git add .gemini
+git add .agent
 git commit -m "Customize TeamLifecycle for our workflow"
 ```
 
@@ -235,15 +235,15 @@ git commit -m "Customize TeamLifecycle for our workflow"
 
 ```bash
 # Week 1: Install and learn
-create-instructions install
-create-instructions ide cursor
+agentic-sdlc install
+agentic-sdlc ide cursor
 # Use for documentation only: /reporter, /pm
 
 # Week 2: Add development
 # Use for coding: /dev, /sa
 
 # Week 3: Add testing
-create-instructions init-kb
+agentic-sdlc init-kb
 # Use for testing: /tester, /qa
 
 # Week 4: Full workflow
@@ -258,11 +258,11 @@ create-instructions init-kb
 
 ```bash
 # Add to .gitignore (if you want to keep instructions private)
-echo ".gemini/" >> .gitignore
+echo ".agent" >> .gitignore
 echo ".cursorrules" >> .gitignore
 
 # Or commit (recommended for teams)
-git add .gemini .cursorrules .github/copilot-instructions.md
+git add .agent .cursorrules .github/copilot-instructions.md
 git commit -m "Add TeamLifecycle SDLC"
 ```
 
@@ -284,8 +284,8 @@ jobs:
       
       - name: Install TeamLifecycle
         run: |
-          npm install -g template-instructions
-          create-instructions install --quiet
+          npm install -g agentic-sdlc
+          agentic-sdlc install --quiet
       
       - name: Validate Documentation
         run: |
@@ -311,7 +311,7 @@ COPY package*.json ./
 RUN npm ci
 
 # Install TeamLifecycle (optional - for development)
-RUN npm install -g template-instructions
+RUN npm install -g agentic-sdlc
 
 COPY . .
 
@@ -330,13 +330,13 @@ CMD ["npm", "start"]
 {
   "files.associations": {
     ".cursorrules": "markdown",
-    ".gemini/**/*.md": "markdown"
+    ".agent**/*.md": "markdown"
   },
   "files.exclude": {
-    ".gemini/instructions/knowledge-base/bugs/**": false
+    ".agent/knowledge-base/bugs/**": false
   },
   "search.exclude": {
-    ".gemini/instructions/ide-integration/**": true
+    ".agent/ide-integration/**": true
   }
 }
 ```
@@ -365,7 +365,7 @@ your-project/
 
 ```
 your-project/
-├── .gemini/instructions/    # NEW - AI-powered SDLC
+├── .agent/    # NEW - AI-powered SDLC
 ├── docs/sprints/            # NEW - Organized documentation
 ├── src/                     # EXISTING - Your code
 ├── tests/                   # EXISTING - Your tests
@@ -388,12 +388,12 @@ your-project/
 ### Day 1: Installation & Exploration
 ```bash
 cd your-project
-create-instructions install
-create-instructions ide cursor
+agentic-sdlc install
+agentic-sdlc ide cursor
 
 # Explore
-cat .gemini/instructions/usage.md
-cat .gemini/instructions/global.md
+cat .agent/usage.md
+cat .agent/global.md
 
 # Try simple command
 # In IDE: /pm Analyze current project structure
@@ -430,7 +430,7 @@ cat .gemini/instructions/global.md
 
 ### Day 5: Knowledge Base
 ```bash
-create-instructions init-kb
+agentic-sdlc init-kb
 
 # Document existing issues
 # In IDE: /kb-add Solution for database connection pooling issue
@@ -441,15 +441,15 @@ create-instructions init-kb
 
 ## ⚠️ Common Issues & Solutions
 
-### Issue 1: .gemini Already Exists
+### Issue 1: .agent Already Exists
 
 ```bash
-# If you have existing .gemini folder
-create-instructions install --force
+# If you have existing .agent folder
+agentic-sdlc install --force
 
 # Or backup first
-mv .gemini .gemini.backup
-create-instructions install
+mv .agent .agent.backup
+agentic-sdlc install
 ```
 
 ---
@@ -461,7 +461,7 @@ create-instructions install
 cp .cursorrules .cursorrules.backup
 
 # Install
-create-instructions ide cursor --force
+agentic-sdlc ide cursor --force
 
 # Merge if needed
 cat .cursorrules.backup >> .cursorrules
@@ -473,7 +473,7 @@ cat .cursorrules.backup >> .cursorrules
 
 ```bash
 # Install normally
-create-instructions install
+agentic-sdlc install
 
 # Use gradually
 # Start with documentation: /reporter, /pm
@@ -489,15 +489,15 @@ create-instructions install
 
 ```bash
 # Install for yourself first
-create-instructions install
-create-instructions ide cursor
+agentic-sdlc install
+agentic-sdlc ide cursor
 
 # Show results to team
 # Generate impressive documentation
 # Demonstrate faster development
 
 # Then roll out to team
-git add .gemini
+git add .agent
 git commit -m "Add optional AI-powered SDLC tools"
 ```
 
@@ -509,12 +509,12 @@ git commit -m "Add optional AI-powered SDLC tools"
 
 ```bash
 # Keep instructions private
-echo ".gemini/" >> .gitignore
+echo ".agent" >> .gitignore
 echo ".cursorrules" >> .gitignore
 echo ".github/copilot-instructions.md" >> .gitignore
 
 # Install locally only
-create-instructions install
+agentic-sdlc install
 ```
 
 ---
@@ -523,7 +523,7 @@ create-instructions install
 
 ```bash
 # Safe to commit (no secrets)
-git add .gemini .cursorrules .github/copilot-instructions.md
+git add .agent .cursorrules .github/copilot-instructions.md
 git commit -m "Add TeamLifecycle SDLC"
 
 # Instructions contain no sensitive data
@@ -537,7 +537,7 @@ git commit -m "Add TeamLifecycle SDLC"
 ```bash
 # Never commit sensitive data to knowledge base
 # Add to .gitignore
-echo ".gemini/instructions/knowledge-base/bugs/critical/*" >> .gitignore
+echo ".agent/knowledge-base/bugs/critical/*" >> .gitignore
 
 # Or use separate private repo for knowledge base
 ```
@@ -585,7 +585,7 @@ echo ".gemini/instructions/knowledge-base/bugs/critical/*" >> .gitignore
 
 ### 3. Build Knowledge Base
 ```bash
-create-instructions init-kb
+agentic-sdlc init-kb
 
 # Document existing patterns
 # In IDE: /kb-add Our authentication pattern
@@ -620,9 +620,9 @@ create-instructions init-kb
 ### Example 1: E-commerce Platform (5 years old)
 ```bash
 cd ecommerce-platform
-create-instructions install
-create-instructions ide all
-create-instructions init-kb
+agentic-sdlc install
+agentic-sdlc ide all
+agentic-sdlc init-kb
 
 # Results after 2 months:
 # - Documented entire legacy codebase
@@ -637,8 +637,8 @@ create-instructions init-kb
 ### Example 2: Startup MVP (6 months old)
 ```bash
 cd startup-mvp
-create-instructions install
-create-instructions ide cursor
+agentic-sdlc install
+agentic-sdlc ide cursor
 
 # Results after 2 weeks:
 # - Proper documentation
@@ -652,8 +652,8 @@ create-instructions ide cursor
 ### Example 3: Open Source Library (3 years old)
 ```bash
 cd oss-library
-create-instructions install
-create-instructions ide copilot
+agentic-sdlc install
+agentic-sdlc ide copilot
 
 # Results after 1 month:
 # - Contributors use consistent workflow
@@ -667,20 +667,20 @@ create-instructions ide copilot
 ## 📞 Support
 
 ### Questions?
-- Read: `.gemini/instructions/usage.md`
+- Read: `.agent/usage.md`
 - Examples: `CLI-EXAMPLES.md`
-- Issues: https://github.com/yourusername/template-instructions/issues
+- Issues: https://github.com/yourusername/agentic-sdlc/issues
 
 ### Need Help?
 ```bash
 # Check installation
-create-instructions list
+agentic-sdlc list
 
 # Reinstall if needed
-create-instructions install --force
+agentic-sdlc install --force
 
 # Setup IDE again
-create-instructions ide cursor --force
+agentic-sdlc ide cursor --force
 ```
 
 ---
@@ -688,8 +688,8 @@ create-instructions ide cursor --force
 ## ✅ Integration Checklist
 
 - [ ] Navigate to existing project
-- [ ] Run `create-instructions install`
-- [ ] Run `create-instructions ide <your-ide>`
+- [ ] Run `agentic-sdlc install`
+- [ ] Run `agentic-sdlc ide <your-ide>`
 - [ ] Test with simple command: `/pm Analyze project`
 - [ ] Review generated documentation
 - [ ] Initialize knowledge base (optional)
@@ -703,7 +703,7 @@ create-instructions ide cursor --force
 
 ```bash
 cd your-project
-create-instructions install
-create-instructions ide cursor
+agentic-sdlc install
+agentic-sdlc ide cursor
 # In IDE: /pm Let's improve this project!
 ```
