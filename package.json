@@ -20,7 +20,11 @@
     "agent:create": "python tools/agent/manage.py create",
     "agent:validate": "python tools/agent/manage.py validate",
     "agent:info": "python tools/agent/manage.py info",
-    "setup": "python tools/setup/init.py"
+    "setup": "python tools/setup/init.py",
+    "release:preview": "python tools/release/release.py preview",
+    "release:changelog": "python tools/release/release.py changelog",
+    "release:version": "python tools/release/release.py version --auto",
+    "release": "python tools/release/release.py release"
   },
   "keywords": [
     "sdlc",
