@@ -1,298 +1,345 @@
 # IDE Integration Guide
 
-This folder contains configuration files to integrate TeamLifecycle roles as slash commands in various IDE agent chats.
+This folder contains integration documentation for TeamLifecycle SDLC workflow with BRAIN orchestrator.
+
+## Supported IDEs
+
+This project officially supports:
+- **Kiro IDE** - Primary integration with automatic steering file loading
+- **Antigravity** - Compound engineering plugin integration
+
+## Architecture
+
+TeamLifecycle uses a layered architecture:
+- **`.agent/`** - Source of truth (roles, workflows, knowledge base)
+- **`.kiro/steering/`** - Kiro IDE integration (lightweight references)
+- **`.agent/ide-integration/`** - Integration documentation (this folder)
 
 ---
 
 ## 📁 Files
 
-| File | IDE | Description |
-|------|-----|-------------|
-| `vscode-commands.json` | VS Code | Command definitions for VS Code extensions |
-| `cursor-rules.md` | Cursor | Custom instructions for Cursor IDE |
-| `github-copilot-instructions.md` | GitHub Copilot | Instructions for Copilot Chat |
-| `windsurf-cascade.md` | Windsurf | Configuration for Cascade multi-agent |
-| `cline-config.json` | Cline | Slash commands for Cline extension |
-| `aider-commands.md` | Aider | Command aliases for Aider CLI |
+| File | Purpose | Description |
+|------|---------|-------------|
+| `README.md` | Overview | This file - integration overview |
+| `KIRO-IDE.md` | Kiro IDE | Complete integration guide for Kiro IDE |
+| `INTEGRATION-SUMMARY.md` | Summary | Integration architecture summary |
 
 ---
 
-## 🚀 Quick Setup by IDE
+## 🚀 Kiro IDE Integration
 
-### 1. Cursor IDE
+### Built-in Support
 
-**Installation:**
-```bash
-# Copy to project root
-cp .agent/ide-integration/cursor-rules.md .cursorrules
+Kiro IDE has **native integration** through `.kiro/steering/` files that are automatically loaded.
+
+**No setup required!** Just start using:
+
+```
+@BRAIN - Build a todo app
+@PM - Create project plan
+@DEV /cycle - Fix login button
+@ORCHESTRATOR --mode=full-auto
 ```
 
-**Usage:**
-```
-/pm Build a todo app
-/auto Create mobile fitness app
-/dev Implement authentication
-```
+### How It Works
+
+1. **Automatic Loading** - Kiro loads all `.kiro/steering/*.md` files
+2. **Keyword Activation** - Mention `@ROLE` to activate that role
+3. **Reference Pattern** - Steering files reference full docs in `.agent/`
+4. **Source of Truth** - All documentation maintained in `.agent/`
+
+### Documentation
+
+See **`KIRO-IDE.md`** for complete integration guide including:
+- Architecture details
+- File structure
+- Usage examples
+- Available commands
+- Workflow states
+- Troubleshooting
 
 ---
 
-### 2. GitHub Copilot (VS Code/JetBrains)
+## 🔄 Antigravity Integration
 
-**Installation:**
-```bash
-# Create .github folder if not exists
-mkdir -p .github
+### Compound Engineering Plugin
 
-# Copy instructions
-cp .agent/ide-integration/github-copilot-instructions.md .github/copilot-instructions.md
+Antigravity's compound engineering plugin integrates with the knowledge base system.
+
+**Integration Points:**
+- `.agent/knowledge-base/` - Shared knowledge repository
+- YAML frontmatter - Searchable metadata
+- Compound loop - Problem → Solution → Document → Reuse
+
+### Knowledge Base Structure
+
+```
+.agent/knowledge-base/
+├── INDEX.md                    # Searchable index
+├── bugs/                       # Bug patterns by priority
+│   ├── critical/
+│   ├── high/
+│   ├── medium/
+│   └── low/
+├── features/                   # Feature implementations
+│   ├── authentication/
+│   ├── performance/
+│   └── integration/
+├── architecture/               # Architecture decisions
+├── security/                   # Security fixes
+├── performance/                # Optimizations
+└── platform-specific/          # Platform issues
 ```
 
-**Usage:**
-```
-/pm Design a REST API
-/sa Create database schema
-/kb-search React hooks
-```
+### Compound Learning Workflow
+
+**Before ANY complex work:**
+1. Search `.agent/knowledge-base/INDEX.md`
+2. Check related categories
+3. Review similar patterns
+4. Apply learned solutions
+5. Document new insights
+
+**Auto-Compounding Triggers:**
+- Bug marked `#fixbug-critical` or `#fixbug-high`
+- Security vulnerabilities found
+- Performance improvement > 20%
+- Architecture decisions documented
+- Platform-specific issues resolved
 
 ---
 
-### 3. Windsurf Cascade
+## 🎯 Available Commands
 
-**Installation:**
-```bash
-# Copy to project root
-cp .agent/ide-integration/windsurf-cascade.md .windsurfrules
+### BRAIN Master Orchestrator
 ```
-
-**Usage:**
+@BRAIN - Build a todo app
+@BRAIN /status - Show workflow state
+@BRAIN /validate - Validate phase completion
+@BRAIN /auto-execute - Full automation mode
+@BRAIN /rollback [STATE] - Rollback to previous state
 ```
-/orchestrator Enable full-auto mode
-/pm Build SaaS platform
-/dev Implement payment gateway
-```
-
-**Cascade Multi-Agent:**
-Windsurf's Cascade will automatically spawn multiple agents in parallel for roles like SA + UIUX + PO.
-
----
-
-### 4. Cline (VS Code Extension)
-
-**Installation:**
-1. Install Cline extension in VS Code
-2. Open Cline settings
-3. Import `cline-config.json`
-
-**Usage:**
-```
-/pm Create project plan
-/dev Fix authentication bug
-/tester Run E2E tests
-```
-
----
-
-### 5. Aider (CLI)
-
-**Installation:**
-```bash
-# Add to ~/.aider.conf.yml or project .aider.conf.yml
-cat .agent/ide-integration/aider-commands.md >> .aider.conf.yml
-```
-
-**Usage:**
-```bash
-aider
-> /pm Build a CLI tool for file conversion
-> /dev Implement JSON to YAML converter
-> /kb-search command line parsing
-```
-
----
-
-## 🎯 Available Slash Commands
 
 ### Core Roles
-| Command | Role | Description |
-|---------|------|-------------|
-| `/pm` | Project Manager | Planning, scope management |
-| `/orchestrator` | Orchestrator | Workflow automation |
-| `/po` | Product Owner | Backlog, prioritization |
-| `/sa` | System Analyst | Architecture, API design |
-| `/uiux` | UI/UX Designer | Interface, user experience |
-| `/qa` | Quality Assurance | Design review, testing |
-| `/seca` | Security Analyst | Security assessment |
-| `/dev` | Developer | Implementation |
-| `/devops` | DevOps | CI/CD, deployment |
-| `/tester` | Tester | Testing, bug detection |
-| `/reporter` | Reporter | Documentation, reports |
-| `/stakeholder` | Stakeholder | Final approval |
-
-### Quick Actions
-| Command | Description |
-|---------|-------------|
-| `/auto [requirements]` | Start with full automation |
-| `/semi-auto [requirements]` | Start with semi-automation |
-| `/kb-search [query]` | Search knowledge base |
-| `/kb-add [topic]` | Add knowledge entry |
-
----
-
-## 🔧 Custom Configuration
-
-### Adding New Commands
-
-Edit the appropriate config file and add:
-
-**For JSON configs (VS Code, Cline):**
-```json
-{
-  "command": "/custom",
-  "description": "Custom command",
-  "prompt": "@ROLE - ",
-  "category": "TeamLifecycle"
-}
+```
+@PM - Project Manager (Planning & Scope)
+@PO - Product Owner (Backlog & Prioritization)
+@SA - System Analyst (Architecture & API Design)
+@UIUX - UI/UX Designer (Interface Design)
+@QA - Quality Assurance (Design Review)
+@SECA - Security Analyst (Security Assessment)
+@DEV - Developer (Implementation)
+@DEVOPS - DevOps Engineer (Infrastructure & Deployment)
+@TESTER - Tester (Testing & Bug Detection)
+@REPORTER - Reporter (Documentation & Reporting)
+@STAKEHOLDER - Stakeholder (Final Review)
+@ORCHESTRATOR - Orchestrator (Workflow Automation)
 ```
 
-**For Markdown configs (Cursor, Copilot, Windsurf):**
-```markdown
-- `/custom` → @ROLE - Custom command description
+### Enhanced Workflows
 ```
-
-### Modifying Existing Commands
-
-1. Open the config file for your IDE
-2. Find the command definition
-3. Update description or prompt
-4. Restart IDE or reload configuration
+/cycle - Complete task lifecycle (< 4 hours)
+/explore - Deep investigation for complex features
+/compound - Capture knowledge after solving problems
+/emergency - Critical incident response
+/housekeeping - Cleanup and maintenance
+/route - Intelligent workflow selection
+```
 
 ---
 
 ## 💡 Usage Examples
 
-### Starting a New Project
+### Using BRAIN Master Orchestrator
 ```
-/pm Build a wedding website with:
-- Photo gallery
-- RSVP form
-- Countdown timer
-Platform: Web (Next.js)
+@BRAIN - Build a todo app with React
+
+BRAIN will:
+1. Initialize workflow state (IDLE → PLANNING)
+2. Activate @PM for planning
+3. Enforce approval gates
+4. Manage all phase transitions
+5. Validate artifacts at each step
+6. Track complete state history
+```
+
+### Check Workflow Status
+```
+@BRAIN /status
+
+Shows:
+- Current state (e.g., DESIGNING)
+- Completed phases
+- In-progress work
+- Next steps
+- Approval gates
+```
+
+### Small Task with /cycle
+```
+@DEV /cycle - Fix login button on mobile
+
+Executes:
+1. Search KB for similar issues
+2. Plan fix
+3. Implement
+4. Test locally
+5. Commit with atomic message
+6. Compound knowledge if non-obvious
+```
+
+### Complex Feature with /explore
+```
+@SA /explore - Real-time notification architecture
+
+Executes:
+1. Multi-order analysis
+2. Research best practices
+3. Evaluate trade-offs
+4. Generate recommendations
+5. Document findings
 ```
 
 ### Full Automation
 ```
-/auto Create a mobile expense tracking app for iOS and Android with:
-- Receipt scanning
-- Category management
-- Budget alerts
-- Export to CSV
-```
+@ORCHESTRATOR --mode=full-auto
+Build authentication system with OAuth
 
-### Development Tasks
-```
-/dev Implement OAuth2 authentication with Google and GitHub providers
-/devops Setup CI/CD pipeline with GitHub Actions
-/tester Create E2E tests for authentication flow
-```
-
-### Knowledge Base
-```
-/kb-search React hydration mismatch
-/kb-add Solution for Next.js API route caching issue
+Executes entire SDLC:
+- Planning → Design → Development → Testing → Deployment
+- Pauses only at approval gates
+- Manages parallel execution
+- Validates all transitions
 ```
 
 ---
 
-## 🔄 Workflow Integration
+## 🔄 Workflow States
 
-### Manual Mode
+BRAIN manages these workflow states:
+
 ```
-/pm [requirements]
-[Review plan]
-"Approved"
-/sa Begin backend design
-/uiux Design UI
-/qa Review designs
-...
+IDLE → PLANNING → PLAN_APPROVAL → DESIGNING → DESIGN_REVIEW → 
+DEVELOPMENT → TESTING → BUG_FIXING → DEPLOYMENT → REPORTING → 
+FINAL_REVIEW → FINAL_APPROVAL → COMPLETE
 ```
 
-### Semi-Auto Mode
-```
-/semi-auto [requirements]
-[Review plan]
-"Approved"
-→ Auto-executes design phase
-[Review results]
-/orchestrator Continue to development
-→ Auto-executes development
-```
+### Approval Gates 🚪
+1. **Project Plan** - After PLANNING (User approval required)
+2. **Design** - After DESIGN_REVIEW (if critical issues found)
+3. **Final Delivery** - After FINAL_REVIEW (User approval required)
 
-### Full-Auto Mode
-```
-/auto [requirements]
-[Review plan]
-"Approved"
-→ Auto-executes entire workflow
-→ Stops only for critical decisions
-[Make decisions when prompted]
-"✅ Project complete"
-```
+### Parallel Execution ⚡
+- **Design Phase:** @SA + @UIUX + @PO work simultaneously
+- **Review Phase:** @QA + @SECA work simultaneously
+- **Development Phase:** @DEV + @DEVOPS work simultaneously
+
+---
+
+## 📚 Documentation
+
+### Integration Guides
+- **Kiro IDE:** `KIRO-IDE.md` - Complete Kiro integration guide
+- **Summary:** `INTEGRATION-SUMMARY.md` - Architecture summary
+
+### System Documentation
+- **Architecture:** `docs/ARCHITECTURE-OVERVIEW.md`
+- **BRAIN Details:** `docs/BRAIN-ARCHITECTURE.md`
+- **Diagrams:** `docs/SDLC-Diagram.md`
+- **Setup Guide:** `docs/SETUP-COMPLETE.md`
+
+### Source Files
+- **Roles:** `.agent/roles/` - Full role documentation
+- **Workflows:** `.agent/workflows/` - Workflow implementations
+- **Knowledge Base:** `.agent/knowledge-base/` - Compound learning
+- **Templates:** `.agent/templates/` - Document templates
+- **Rules:** `.agent/rules/` - Global rules
+
+### Kiro Integration
+- **Steering Files:** `.kiro/steering/` - Kiro IDE references
+- **README:** `.kiro/steering/README.md` - Steering guide
 
 ---
 
 ## 🐛 Troubleshooting
 
-### Commands Not Working
+### Kiro IDE Issues
 
-**Cursor:**
-- Ensure `.cursorrules` is in project root
-- Restart Cursor IDE
-- Check file is not ignored by `.gitignore`
+**Role Not Activating:**
+- Check `.kiro/steering/role-[name].md` exists
+- Check `.agent/roles/role-[name].md` exists
+- Verify keywords in frontmatter
+- Use exact keyword (e.g., `@PM`)
 
-**GitHub Copilot:**
-- Ensure `.github/copilot-instructions.md` exists
-- Restart VS Code
-- Check Copilot is enabled
+**Commands Not Working:**
+- Check command syntax (e.g., `@BRAIN /status`)
+- Ensure role is activated first
+- Verify Kiro has project access
 
-**Windsurf:**
-- Ensure `.windsurfrules` is in project root
-- Restart Windsurf
-- Check Cascade is enabled
+**Workflow Not Progressing:**
+- Check BRAIN is managing workflow
+- Verify approval gates are satisfied
+- Ensure required artifacts exist
+- Check for blocking bugs
 
-### Commands Not Autocompleting
+### Knowledge Base Issues
 
-- Type `/` and wait for suggestions
-- Check IDE agent chat is active
-- Verify config file syntax is correct
+**Search Not Finding Entries:**
+- Check `.agent/knowledge-base/INDEX.md` is updated
+- Verify YAML frontmatter is correct
+- Check category structure
+- Ensure tags are properly formatted
 
-### Role Not Loading
-
-- Check role file exists: `.agent/workflows/[role].md`
-- Verify file permissions
-- Check IDE has access to project files
-
----
-
-## 📚 Additional Resources
-
-- **Global Rules:** `.agent/rules/global.md`
-- **Usage Guide:** `.agent/usage.md`
-- **Role Definitions:** `.agent/workflows/`
-- **Templates:** `.agent/templates/`
-- **Knowledge Base:** `.agent/knowledge-base/`
+**Compound Not Triggering:**
+- Check bug priority tags (`#fixbug-critical`, `#fixbug-high`)
+- Verify solution was non-obvious (3+ attempts)
+- Check auto-compound triggers
+- Manually use `/compound` if needed
 
 ---
 
-## 🤝 Contributing
+## 🤝 Philosophy
 
-To add support for a new IDE:
+> "Each unit of engineering work should make subsequent units of work easier—not harder."
 
-1. Create config file: `[ide-name]-config.[ext]`
-2. Define slash commands mapping to roles
-3. Add installation instructions to this README
-4. Test commands in the IDE
-5. Submit PR with examples
+This system transforms AI agents from session-to-session amnesiacs into learning partners that compound their capabilities over time.
+
+### Key Principles
+
+1. **Single Source of Truth** - All documentation in `.agent/`
+2. **Strict Enforcement** - BRAIN enforces workflow rules
+3. **Compound Learning** - Every solution becomes knowledge
+4. **IDE Agnostic** - Core logic not tied to specific IDE
+5. **Maintainable** - Clear separation of concerns
 
 ---
 
-#ide-integration #slash-commands #automation
+## 📊 Metrics
+
+### Workflow Metrics
+- Phase durations
+- Approval gate status
+- Iteration counts
+- Efficiency scores
+
+### Compound Metrics
+- Total KB entries
+- Time saved by reusing solutions
+- Pattern reuse rate
+- Knowledge coverage percentage
+
+### Quality Metrics
+- Bug counts by priority
+- Test coverage
+- Security issues
+- Performance improvements
+
+---
+
+**Version:** 1.0.0  
+**Created:** 2026-01-02  
+**Status:** Production Ready ✅  
+**Supported IDEs:** Kiro IDE, Antigravity
+
+#ide-integration #kiro-ide #antigravity #teamlifecycle

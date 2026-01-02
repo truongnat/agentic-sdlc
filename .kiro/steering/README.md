@@ -1,6 +1,20 @@
 # TeamLifecycle Steering Files for Kiro IDE
 
-This directory contains steering files that guide Kiro IDE through the TeamLifecycle SDLC workflow with compound engineering principles.
+This directory contains **lightweight reference files** that point to the source documentation in `.agent/`.
+
+## Architecture
+
+```
+.agent/                          # SOURCE OF TRUTH
+├── roles/                       # Full role documentation
+├── workflows/                   # Workflow implementations
+└── knowledge-base/              # Compound learning system
+
+.kiro/steering/                  # REFERENCES ONLY
+├── role-*.md                    # Lightweight role references
+├── workflow-*.md                # Workflow guides
+└── *.md                         # Core rules and patterns
+```
 
 ## What are Steering Files?
 
@@ -8,6 +22,8 @@ Steering files provide context and instructions to Kiro IDE. They can be:
 - **Always included** - Loaded automatically in every conversation
 - **Manually included** - Activated when user mentions specific keywords
 - **File-matched** - Loaded when working with specific file types
+
+**Note:** Role files in this directory are lightweight references. Full documentation is in `.agent/roles/`.
 
 ## Available Steering Files
 
@@ -20,20 +36,21 @@ Steering files provide context and instructions to Kiro IDE. They can be:
 - `workflow-routing.md` - Workflow selection guide
 
 ### Role-Specific (Manual Activation)
-Activate by mentioning the role in your message:
+Activate by mentioning the role in your message. These are lightweight references to `.agent/roles/`:
 
-- `role-pm.md` - Project Manager (@PM)
-- `role-po.md` - Product Owner (@PO)
-- `role-sa.md` - System Analyst (@SA)
-- `role-uiux.md` - UI/UX Designer (@UIUX)
-- `role-qa.md` - Quality Assurance (@QA)
-- `role-seca.md` - Security Analyst (@SECA)
-- `role-dev.md` - Developer (@DEV)
-- `role-devops.md` - DevOps Engineer (@DEVOPS)
-- `role-tester.md` - Tester (@TESTER)
-- `role-reporter.md` - Reporter (@REPORTER)
-- `role-stakeholder.md` - Stakeholder (@STAKEHOLDER)
-- `role-orchestrator.md` - Orchestrator (@ORCHESTRATOR)
+- `role-brain.md` - Master Orchestrator (@BRAIN) → `.agent/roles/role-brain.md`
+- `role-pm.md` - Project Manager (@PM) → `.agent/roles/role-pm.md`
+- `role-po.md` - Product Owner (@PO) → `.agent/roles/role-po.md`
+- `role-sa.md` - System Analyst (@SA) → `.agent/roles/role-sa.md`
+- `role-uiux.md` - UI/UX Designer (@UIUX) → `.agent/roles/role-uiux.md`
+- `role-qa.md` - Quality Assurance (@QA) → `.agent/roles/role-qa.md`
+- `role-seca.md` - Security Analyst (@SECA) → `.agent/roles/role-seca.md`
+- `role-dev.md` - Developer (@DEV) → `.agent/roles/role-dev.md`
+- `role-devops.md` - DevOps Engineer (@DEVOPS) → `.agent/roles/role-devops.md`
+- `role-tester.md` - Tester (@TESTER) → `.agent/roles/role-tester.md`
+- `role-reporter.md` - Reporter (@REPORTER) → `.agent/roles/role-reporter.md`
+- `role-stakeholder.md` - Stakeholder (@STAKEHOLDER) → `.agent/roles/role-stakeholder.md`
+- `role-orchestrator.md` - Orchestrator (@ORCHESTRATOR) → `.agent/roles/role-orchestrator.md`
 
 ### Supporting Files (Manual Activation)
 - `git-workflow.md` - Git commit rules and conventions
