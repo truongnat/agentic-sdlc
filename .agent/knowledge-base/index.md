@@ -1,7 +1,7 @@
 # Knowledge Base Index
 
-**Last Updated:** 2026-01-02 10:10:39  
-**Total Entries:** 2
+**Last Updated:** 2026-01-02  
+**Total Entries:** 3
 
 This index provides a searchable overview of all knowledge base entries.
 
@@ -9,16 +9,21 @@ This index provides a searchable overview of all knowledge base entries.
 
 ## 📊 Quick Stats
 
-- **Total Entries:** 2
+- **Total Entries:** 3
 - **Categories:** 1
-- **Priorities:** 1
+- **Priorities:** 2
 
 ---
 
 ## 📁 By Category
 
 
-### ✨ Feature (2 entries)
+### ✨ Feature (3 entries)
+
+- 🔴 **Figma Landing Page Design & Development Workflow**
+  - File: `features/figma-landing-page-workflow.md`
+  - Date: 2026-01-02 | Priority: high
+  - Tags: figma, landing-page, design-to-code, tailwind, astro, mcp, ai-workflow
 
 - 🟡 **Modern AI-Style Landing Page UI Enhancement**
   - File: `KB-2026-01-01-005-modern-ai-landing-page-ui.md`
@@ -35,6 +40,10 @@ This index provides a searchable overview of all knowledge base entries.
 
 ## ⚠️ By Priority
 
+### 🔴 High (1 entry)
+
+- **Figma Landing Page Design & Development Workflow** (feature)
+  - `features/figma-landing-page-workflow.md`
 
 ### 🟡 Medium (2 entries)
 
@@ -46,6 +55,10 @@ This index provides a searchable overview of all knowledge base entries.
 ---
 
 ## 📅 Recent Entries (Last 20)
+
+- 🔴 **Figma Landing Page Design & Development Workflow**
+  - `features/figma-landing-page-workflow.md`
+  - 2026-01-02 | feature | high
 
 - 🟡 **Modern AI-Style Landing Page UI Enhancement**
   - `KB-2026-01-01-005-modern-ai-landing-page-ui.md`

@@ -6,22 +6,26 @@
   aria-labelledby="hero-title"
   role="banner"
 >
-  <!-- AI-inspired animated gradient mesh background -->
-  <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950" aria-hidden="true"></div>
+  <!-- AI-inspired animated gradient mesh background with depth -->
+  <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-indigo-950/50 to-slate-950" aria-hidden="true">
+    <!-- Radial gradients for depth -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-transparent"></div>
+  </div>
   
   <!-- Neural network inspired grid -->
   <div class="absolute inset-0 opacity-20" aria-hidden="true">
     <div class="absolute inset-0" style="background-image: linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
   </div>
   
-  <!-- Animated AI orbs with glassmorphism -->
+  <!-- Animated AI orbs with enhanced glassmorphism and blur -->
   <div class="absolute inset-0 overflow-hidden" aria-hidden="true">
-    <div class="absolute w-[600px] h-[600px] rounded-full blur-3xl animate-float opacity-30" 
-         style="top: -10%; left: -10%; background: radial-gradient(circle, rgba(99, 102, 241, 0.8) 0%, rgba(139, 92, 246, 0.4) 50%, transparent 100%);"></div>
-    <div class="absolute w-[500px] h-[500px] rounded-full blur-3xl animate-float opacity-30" 
-         style="top: 40%; right: -10%; animation-delay: 2s; background: radial-gradient(circle, rgba(236, 72, 153, 0.8) 0%, rgba(139, 92, 246, 0.4) 50%, transparent 100%);"></div>
-    <div class="absolute w-[400px] h-[400px] rounded-full blur-3xl animate-float opacity-30" 
-         style="bottom: -10%; left: 40%; animation-delay: 4s; background: radial-gradient(circle, rgba(59, 130, 246, 0.8) 0%, rgba(99, 102, 241, 0.4) 50%, transparent 100%);"></div>
+    <div class="absolute w-[700px] h-[700px] rounded-full blur-[120px] animate-float-slow opacity-40" 
+         style="top: -15%; left: -15%; background: radial-gradient(circle, rgba(99, 102, 241, 0.9) 0%, rgba(139, 92, 246, 0.5) 40%, transparent 70%);"></div>
+    <div class="absolute w-[600px] h-[600px] rounded-full blur-[100px] animate-float opacity-35" 
+         style="top: 35%; right: -15%; animation-delay: 2s; background: radial-gradient(circle, rgba(236, 72, 153, 0.9) 0%, rgba(139, 92, 246, 0.5) 40%, transparent 70%);"></div>
+    <div class="absolute w-[500px] h-[500px] rounded-full blur-[90px] animate-float-delayed opacity-30" 
+         style="bottom: -15%; left: 35%; animation-delay: 4s; background: radial-gradient(circle, rgba(59, 130, 246, 0.9) 0%, rgba(99, 102, 241, 0.5) 40%, transparent 70%);"></div>
   </div>
   
   <!-- Floating particles -->
@@ -55,43 +59,68 @@
         </span>
       </h1>
       
-      <!-- Enhanced subtitle with glassmorphism -->
-      <div class="relative max-w-3xl mx-auto mb-10 animate-slide-up" style="animation-delay: 0.2s;">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl blur-xl"></div>
-        <div class="relative backdrop-blur-2xl bg-white/5 border border-white/10 rounded-2xl p-8 shadow-2xl">
-          <p class="body-large text-blue-50 leading-relaxed">
-            Watch <span class="font-bold bg-gradient-to-r from-blue-300 to-purple-300 bg-clip-text text-transparent">12 specialized AI agents</span> handle planning, design, development, testing, and deployment—while you focus on building great products.
+      <!-- Enhanced subtitle with premium glassmorphism -->
+      <div class="relative max-w-3xl mx-auto mb-12 animate-slide-up" style="animation-delay: 0.2s;">
+        <!-- Glow effect -->
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/30 via-purple-500/30 to-pink-500/30 rounded-3xl blur-2xl"></div>
+        
+        <!-- Glass container with enhanced effects -->
+        <div class="relative backdrop-blur-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.03] border border-white/10 rounded-3xl p-10 shadow-glass-lg overflow-hidden">
+          <!-- Shimmer overlay -->
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full animate-shimmer"></div>
+          
+          <!-- Border gradient -->
+          <div class="absolute inset-0 rounded-3xl p-[1px] bg-gradient-to-br from-blue-400/20 via-purple-400/20 to-pink-400/20 -z-10"></div>
+          
+          <p class="body-large text-blue-50 leading-relaxed relative z-10">
+            Watch <span class="font-bold bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">12 specialized AI agents</span> handle planning, design, development, testing, and deployment—while you focus on building great products.
           </p>
         </div>
       </div>
       
-      <!-- Modern AI-style CTAs -->
+      <!-- Premium AI-style CTAs with enhanced effects -->
       <nav aria-label="Primary call-to-action" class="flex flex-col sm:flex-row gap-6 justify-center mb-16 animate-slide-up" style="animation-delay: 0.4s;">
         <a 
           href="#quick-start" 
-          class="group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold text-white rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105"
+          class="group relative inline-flex items-center justify-center gap-3 px-10 py-5 text-lg font-bold text-white rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-glow-xl"
           aria-label="Start building in 5 minutes - Get started guide"
         >
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 animate-gradient"></div>
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <!-- Animated gradient background -->
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 animate-gradient-x bg-200%"></div>
+          
+          <!-- Hover overlay -->
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <!-- Shimmer effect -->
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+          
+          <!-- Glow effect -->
+          <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500"></div>
+          
           <span class="relative z-10 flex items-center gap-3">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
             Start Building in 5 Minutes
-            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
             </svg>
           </span>
-          <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-300"></div>
         </a>
+        
         <a 
           href="#use-cases" 
-          class="group relative inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold text-white rounded-2xl backdrop-blur-xl bg-white/5 border-2 border-white/10 hover:border-white/20 hover:bg-white/10 transition-all duration-300 hover:scale-105"
+          class="group relative inline-flex items-center justify-center gap-3 px-10 py-5 text-lg font-bold text-white rounded-2xl backdrop-blur-xl bg-white/5 border-2 border-white/10 hover:border-white/30 hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-glow overflow-hidden"
           aria-label="See how Agentic SDLC works - View use cases"
         >
-          <span class="flex items-center gap-3">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <!-- Hover gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <!-- Shimmer effect -->
+          <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+          
+          <span class="relative z-10 flex items-center gap-3">
+            <svg class="w-6 h-6 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
@@ -100,21 +129,31 @@
         </a>
       </nav>
       
-      <!-- Modern AI-style code block with enhanced glassmorphism -->
+      <!-- Premium AI-style code block with enhanced glassmorphism -->
       <div class="relative max-w-3xl mx-auto animate-slide-up" style="animation-delay: 0.6s;" role="region" aria-label="Installation code example">
-        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur-2xl"></div>
-        <div class="relative backdrop-blur-2xl bg-slate-900/80 border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
-          <div class="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-white/5">
-            <div class="flex items-center gap-3">
+        <!-- Multi-layer glow effect -->
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-3xl"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-3xl blur-xl"></div>
+        
+        <!-- Main container with enhanced glass effect -->
+        <div class="relative backdrop-blur-2xl bg-gradient-to-br from-slate-900/95 to-slate-800/95 border border-white/10 rounded-3xl overflow-hidden shadow-glass-lg">
+          <!-- Top bar with macOS-style controls -->
+          <div class="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-gradient-to-r from-white/[0.08] to-white/[0.03]">
+            <div class="flex items-center gap-4">
               <div class="flex gap-2" aria-hidden="true">
-                <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
-                <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                <div class="w-3 h-3 rounded-full bg-red-500/90 hover:bg-red-400 transition-colors cursor-pointer"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500/90 hover:bg-yellow-400 transition-colors cursor-pointer"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500/90 hover:bg-green-400 transition-colors cursor-pointer"></div>
               </div>
-              <span class="text-sm text-gray-400 font-mono">terminal</span>
+              <span class="text-sm text-gray-400 font-mono flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                terminal
+              </span>
             </div>
             <button 
-              class="group flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-gray-300 hover:text-white bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-200"
+              class="group flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-300 hover:text-white bg-white/5 hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-105"
               onclick="navigator.clipboard.writeText('npm install -g agentic-sdlc\\nagentic-sdlc create my-app'); this.innerHTML = '<svg class=\\'w-4 h-4\\' fill=\\'none\\' stroke=\\'currentColor\\' viewBox=\\'0 0 24 24\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M5 13l4 4L19 7\\'></path></svg> Copied!'; setTimeout(() => this.innerHTML = '<svg class=\\'w-4 h-4\\' fill=\\'none\\' stroke=\\'currentColor\\' viewBox=\\'0 0 24 24\\'><path stroke-linecap=\\'round\\' stroke-linejoin=\\'round\\' stroke-width=\\'2\\' d=\\'M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\\'></path></svg> Copy', 2000)"
               aria-label="Copy installation command to clipboard"
             >
@@ -124,7 +163,9 @@
               Copy
             </button>
           </div>
-          <div class="p-6">
+          
+          <!-- Code content with syntax highlighting -->
+          <div class="p-8 bg-gradient-to-br from-slate-900/50 to-slate-800/50">
             <pre class="text-left font-mono text-sm leading-relaxed"><code><span class="text-gray-500"># Install globally</span>
 <span class="text-blue-400">npm</span> <span class="text-purple-400">install</span> <span class="text-pink-400">-g</span> <span class="text-white">agentic-sdlc</span>
 
@@ -134,6 +175,9 @@
 <span class="text-gray-500"># Start building with AI</span>
 <span class="text-green-400">/pm</span> <span class="text-white">Build a todo app with auth</span></code></pre>
           </div>
+          
+          <!-- Bottom accent bar -->
+          <div class="h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
         </div>
       </div>
     </div>
