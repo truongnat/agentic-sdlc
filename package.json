@@ -8,13 +8,13 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "workflow:cycle": "python .agent/scripts/workflows/cycle.py",
-    "workflow:housekeeping": "python .agent/scripts/workflows/housekeeping.py",
-    "kb:search": "python .agent/scripts/kb/search.py",
-    "kb:stats": "python .agent/scripts/kb/stats.py",
-    "kb:update": "python .agent/scripts/kb/update-index.py",
-    "health": "python .agent/scripts/validation/health-check.py",
-    "agent": "python .agent/scripts/run.py"
+    "workflow:cycle": "python tools/workflows/cycle.py",
+    "workflow:housekeeping": "python tools/workflows/housekeeping.py",
+    "kb:search": "python tools/kb/search.py",
+    "kb:stats": "python tools/kb/stats.py",
+    "kb:update": "python tools/kb/update-index.py",
+    "health": "python tools/validation/health-check.py",
+    "agent": "python tools/run.py"
   },
   "keywords": [
     "sdlc",

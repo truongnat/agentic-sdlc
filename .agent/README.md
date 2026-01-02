@@ -39,6 +39,8 @@ This directory contains the **source of truth** for all TeamLifecycle SDLC workf
         └── steering/            # References to .agent files
 ```
 
+**Note:** All executable scripts are in `tools/` directory. See `tools/README.md` for details.
+
 ## Integration with Kiro IDE
 
 The `.kiro/steering/` directory contains **reference files** that point to the source documentation in `.agent/`:
@@ -126,6 +128,20 @@ Global rules and patterns:
 - Critical patterns (antibodies)
 - Compound learning principles
 - Best practices
+
+## Executable Scripts
+
+**All executable scripts are in `tools/` directory:**
+- `tools/workflows/` - Workflow automation
+- `tools/kb/` - Knowledge base management
+- `tools/validation/` - Health checks
+- `tools/utils/` - Shared utilities
+- `tools/github/` - GitHub integration
+- `tools/neo4j/` - Neo4j integration
+- `tools/research/` - Research agent
+- `tools/setup/` - Setup utilities
+
+See `tools/README.md` for complete documentation.
 
 ## How to Use
 

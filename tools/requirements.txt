@@ -1,0 +1,76 @@
+# Agentic SDLC - Tools Requirements
+# Master requirements file for all tools/ scripts
+# Install: pip install -r tools/requirements.txt
+
+# ============================================================
+# GitHub Integration (tools/github/)
+# ============================================================
+PyGithub>=2.1.1              # GitHub API wrapper
+python-dotenv>=1.0.0         # Environment variable management
+
+# ============================================================
+# Neo4j Integration (tools/neo4j/)
+# ============================================================
+neo4j>=5.14.0                # Neo4j Python driver
+python-dotenv>=1.0.0         # Environment variable management
+
+# ============================================================
+# Research Agent (tools/research/)
+# ============================================================
+requests>=2.31.0             # HTTP requests
+python-dotenv>=1.0.0         # Environment variable management
+
+# Optional: For extended MCP integration
+# tavily-python>=0.3.0       # Tavily AI Search API
+# brave-search>=1.0.0        # Brave Search API
+
+# ============================================================
+# Common Dependencies
+# ============================================================
+pyyaml>=6.0.1                # YAML parsing (KB entries)
+pathlib>=1.0.1               # Path manipulation
+argparse>=1.4.0              # Command-line argument parsing
+
+# ============================================================
+# Development Dependencies (Optional)
+# ============================================================
+# pytest>=7.4.0              # Testing framework
+# black>=23.0.0              # Code formatter
+# pylint>=3.0.0              # Code linter
+# mypy>=1.7.0                # Type checker
+
+# ============================================================
+# Installation Instructions
+# ============================================================
+# 
+# Install all dependencies:
+#   pip install -r tools/requirements.txt
+#
+# Install specific tool dependencies:
+#   pip install -r tools/github/requirements.txt
+#   pip install -r tools/neo4j/requirements.txt
+#   pip install -r tools/research/requirements.txt
+#
+# Install with development dependencies:
+#   pip install -r tools/requirements.txt -r tools/requirements-dev.txt
+#
+# Upgrade all dependencies:
+#   pip install --upgrade -r tools/requirements.txt
+#
+# ============================================================
+# Platform-Specific Notes
+# ============================================================
+#
+# Windows:
+#   pip install -r tools/requirements.txt
+#
+# Linux/macOS:
+#   pip3 install -r tools/requirements.txt
+#
+# Virtual Environment (Recommended):
+#   python -m venv venv
+#   source venv/bin/activate  # Linux/macOS
+#   venv\Scripts\activate     # Windows
+#   pip install -r tools/requirements.txt
+#
+# ============================================================

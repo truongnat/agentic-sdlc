@@ -1,12 +1,19 @@
-# Knowledge Base Scripts
+# Knowledge Base Scripts (Python Only)
 
 **Cross-Platform CLI** - Works on Windows, Linux, and macOS
 
-PowerShell scripts and Python-based CLI for managing the TeamLifecycle knowledge base with Neo4j brain integration.
+Python-based CLI for managing the TeamLifecycle knowledge base with Neo4j brain integration.
+
+## 🐍 Technology Stack
+
+- ✅ **Python 3.7+** - Primary language
+- ✅ **Shell scripts** - Linux/macOS entry points
+- ✅ **Batch/PowerShell** - Windows entry points
+- ❌ **NO JavaScript/Node.js**
 
 ## 🌍 Cross-Platform Support
 
-The KB CLI now supports all major platforms:
+The KB CLI supports all major platforms:
 
 - **Windows** - CMD, PowerShell, Git Bash
 - **Linux** - Bash, Zsh, Fish
@@ -16,15 +23,15 @@ The KB CLI now supports all major platforms:
 
 **Windows:**
 ```cmd
-bin\kb.bat help
+bin\kb\kb.bat help
 ```
 
 **Linux/macOS:**
 ```bash
-./bin/kb help
+./bin/kb/kb help
 ```
 
-**See:** `CROSS-PLATFORM-CLI.md` for complete cross-platform guide
+**See:** `kb/CROSS-PLATFORM-CLI.md` for complete cross-platform guide
 
 ## Overview
 
