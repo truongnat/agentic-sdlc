@@ -9,7 +9,7 @@
 | LP-003 | Initialize Dev Log | @PM | Done | [This File] |
 | LP-004 | Verify Tech Stack (Astro) | @SA | Todo | |
 | LP-005 | Check Compliance (Validate) | @QA | Todo | |
-| LP-006 | Run Performance/Accessibility Audit | @DEV | Todo | |
+| LP-006 | Run Performance/Accessibility Audit | @DEV | Done | [Audit-Report-LP-006.json] |
 | LP-007 | Implement SEO Fixes | @DEV | Todo | |
 
 ## Daily Updates
