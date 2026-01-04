@@ -6,6 +6,15 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.3.0] - 2026-01-04 (Sprint 6)
+
+### Added
+- [Tools] enable release automation features
+- add knowledge base index, release workflow and tool, and initial reports.
+
+
+---
+
 ## [1.2.0] - 2026-01-04 (Sprint 6)
 
 ### Added
