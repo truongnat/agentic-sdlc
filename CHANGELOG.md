@@ -6,6 +6,23 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.6.0] - 2026-01-04 (Sprint 6)
+
+### Added
+- add release management tool for automated changelog generation and version bumping based on conventional commits
+
+### Documentation
+- [Workflows] standardize on agentic-sdlc cli and unified roles
+- [Templates] update templates for unified roles and automation
+- [Skills] consolidate roles and update for release/automation
+- [Rules] update release workflow and tooling standards
+
+### Testing
+- add release manager tests and fix breaking change detection
+
+
+---
+
 ## [1.5.1] - 2026-01-04 (Sprint 6)
 
 ### Documentation
