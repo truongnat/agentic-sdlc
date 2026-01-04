@@ -6,6 +6,75 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.2.0] - 2026-01-04 (Sprint 6)
+
+### Added
+- introduce comprehensive AI agent rules and workflows for enforcement, validation, and incident response.
+- add landing-page project to workspaces
+- Initialize new Astro landing page project with core components, pages, and blog functionality.
+- Introduce BA role, streamline workflows to 12, and add sprint brain state management.
+- Introduce 3-Layer Architecture, Brain Meta-Controller with new components, and GitHub management documentation.
+- Introduce agentic brain components including a model optimizer, judge, learner, and self-improver for enhanced decision-making and performance.
+- Implement Brain orchestrator with state machine, CLI, and core SDLC workflows.
+- Establish agentic SDLC framework with new workflows, skills, and metrics documentation.
+- Add initial landing page structure with Hero and ValueProp components.
+- add chat communication database
+- Initialize comprehensive agentic SDLC workflows, knowledge base, and project documentation for a landing page project.
+- Implement workflow optimization, add new workflows, project structures, and documentation, and update project configurations.
+- Implement a comprehensive agentic workflow system with defined roles, global rules, and Neo4j integration, alongside updated documentation and environment templates.
+- Implement initial landing page and add comprehensive release management tools.
+- Implement Neo4j learning engine, document sync, add various agent workflows, knowledge base entries, tests, and CI/CD configurations.
+- Initialize agent workflows, knowledge base, communication tools, and scaffold new todo app and landing page projects with extensive documentation.
+- [Agent-System] Add comprehensive landing page workflow, role improvements, and automation scripts
+- [Knowledge-Base] Add comprehensive CLI tooling and Neo4j integration documentation
+- [Landing Page] Apply award-winning patterns from Awwwards research - Implement 3D depth effects with layered shadows - Add bento-style grid layout with modern spacing - Create shine effect on hover for premium feel - Enhance icon treatment with floating 3D effects - Add feature badge with gradient text - Improve hover states with smooth animations - Upgrade CTA button with 3D glow effect - Enhance background orbs for better depth - Increase typography scale for impact - Add smooth micro-interactions (500ms duration) Research: Analyzed 30+ Awwwards winners KB Reference: KB-2026-01-01-006 Applied patterns from: KB-2026-01-01-001, KB-2026-01-01-005 Build: âœ… Successful (3.60s) #ui-enhancement #awwwards #3d-effects #bento-grid #cycle-complete
+- [Landing Page] Enhance UI with modern AI-style design - Add AI-inspired animated gradient backgrounds - Implement advanced glassmorphism effects with depth - Create floating particle animation system - Add neural network-inspired grid overlay - Enhance CTA buttons with animated gradients and glow effects - Redesign code block with terminal-style UI - Add AI-powered badge with pulsing indicator - Implement shimmer animation for gradient text - Improve visual hierarchy and typography - Maintain accessibility and responsive design KB Reference: KB-2026-01-01-005 Applied patterns from: KB-2026-01-01-001, KB-2026-01-01-004 Build: âœ… Successful (5.21s) #ui-enhancement #ai-aesthetic #glassmorphism #cycle-complete
+- [Agent-System] Add comprehensive workflow system with compound engineering and todo-app implementation
+
+### Fixed
+- [Tools] exclude validate.md documentation from validation scan
+- [Landing Page] Improve Features section visibility and contrast - Replace transparent glassmorphism with solid slate-900/90 background - Increase border visibility (slate-700/50) - Improve text contrast (slate-300 for descriptions) - Simplify 3D effects for better visibility - Remove overly complex layering - Maintain hover animations and interactions - Fix CTA button layering issues Issue: Features cards were too transparent and hard to see Solution: Solid backgrounds with better contrast Build: âœ… Successful (4.94s) #bugfix #ui-visibility #contrast
+
+### Documentation
+- Add Sprint 1 phase report for landing page project and new communication database.
+- [Steering] Add comprehensive BRAIN role guide and SDLC architecture documentation
+- [Knowledge-Base] Enhance auto-learning guide with Neo4j integration and modern AI landing page documentation
+- [Sprint-3] Add comprehensive sprint documentation and landing page UX improvements
+- [Steering] Refactor role guidelines to prioritize action over documentation
+
+### Changed
+- [Monorepo] Reorganize project structure and consolidate workflows
+- [Agent System] Reorganize role definitions and consolidate IDE integration
+- Reorganize project structure and consolidate documentation
+
+### Testing
+- [Todo-App] Add comprehensive test suite with Jest and Vitest
+
+### Maintenance
+- remove a deleted file .kiro config
+- remove deleted file
+- release v1.1.0 - Tools Gap Fixes & Test Infrastructure
+- [Scripts] Consolidate executable scripts to tools directory
+
+### Other
+- [LP-206] fix: ui cleanup and dead code removal
+- [DEV] docs: update log for LP-205
+- [LP-205] fix: update broken links to point to active sections
+- [REFACTOR] refactor: simplify landing page to focus on core values
+- [TESTER] chore: add test report for sprint 2
+- [FEAT] feat: implement Strict Compliance section
+- [DESIGN] docs: create UI spec for sprint 2
+- [PLAN] recovery: recreate sprint 2 docs
+- [PLAN] docs: create user stories and dev log for sprint 2
+- [PLAN] draft: sprint 2 project plan
+- [TESTER] chore: add test report for LP-007
+- [LP-007] docs: update dev log
+- [LP-007] feat: optimize font loading and add SEO meta tags
+- [LP-006] docs: update dev log
+
+
+---
+
 ## [2.0.0] - 2026-01-04 (Sprint 5 - 3-Layer Architecture & Brain Meta-Controller)
 
 ### Added
