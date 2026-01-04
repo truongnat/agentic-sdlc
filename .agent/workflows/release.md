@@ -22,7 +22,7 @@ python tools/release/release.py changelog --sprint 6
 python tools/release/release.py version --auto
 
 # Full release cycle
-python tools/release/release.py release --tag
+python tools/release/release.py release --tag --push --publish
 ```
 
 ## Conventional Commit Format
@@ -95,7 +95,7 @@ Updates `package.json` version.
 
 ### 4. Full Release
 ```bash
-python tools/release/release.py release --sprint 6 --tag
+python tools/release/release.py release --sprint 6 --tag --push --publish
 ```
 Executes:
 1. Parse commits
@@ -103,8 +103,10 @@ Executes:
 3. Generate changelog
 4. Update version
 5. Create git tag (optional)
+6. Push changes (optional)
+7. Publish to npm/bun (optional)
 
-### 5. Push Release
+### 5. Push Release (Manual)
 ```bash
 git add CHANGELOG.md package.json
 git commit -m "chore(release): v1.2.0"

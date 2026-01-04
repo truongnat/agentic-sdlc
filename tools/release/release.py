@@ -353,6 +353,54 @@ class ReleaseManager:
             print_error(f"Failed to create tag: {e}")
             return False
 
+    def push_changes(self, dry_run: bool = False) -> bool:
+        """Push changes and tags to remote."""
+        if dry_run:
+            print_info("DRY RUN - Would push changes and tags")
+            return True
+            
+        try:
+            print_info("Pushing changes...")
+            subprocess.run(['git', 'push'], check=True, cwd=self.root)
+            
+            print_info("Pushing tags...")
+            subprocess.run(['git', 'push', '--tags'], check=True, cwd=self.root)
+            
+            print_success("Changes and tags pushed successfully!")
+            return True
+        except Exception as e:
+            print_error(f"Failed to push: {e}")
+            return False
+
+    def publish_package(self, dry_run: bool = False) -> bool:
+        """Publish package to npm/bun registry."""
+        if dry_run:
+            print_info("DRY RUN - Would publish to registry")
+            return True
+            
+        try:
+            # Check if private
+            with open(self.package_path, 'r') as f:
+                data = json.load(f)
+            
+            if data.get('private') is True:
+                print_warning("Package is marked as private. Skipping publish.")
+                return False
+            
+            cmd = ['npm', 'publish']
+            # Try to use bun if packageManager is set or available
+            if 'bun' in data.get('packageManager', ''):
+                cmd = ['bun', 'publish']
+                
+            print_info(f"Publishing with {' '.join(cmd)}...")
+            subprocess.run(cmd, check=True, cwd=self.root)
+            
+            print_success("Package published successfully!")
+            return True
+        except Exception as e:
+            print_error(f"Failed to publish: {e}")
+            return False
+
 
 def cmd_preview(manager: ReleaseManager, args):
     """Preview changes without applying."""
@@ -485,9 +533,18 @@ def cmd_release(manager: ReleaseManager, args):
     if args.tag and not args.dry_run:
         manager.create_tag(new_version, dry_run=args.dry_run)
     
+    # 6. Push changes (optional)
+    if args.push:
+        manager.push_changes(dry_run=args.dry_run)
+        
+    # 7. Publish package (optional)
+    if args.publish:
+        manager.publish_package(dry_run=args.dry_run)
+    
     if not args.dry_run:
         print_success(f"Release {new_version} completed!")
-        print_info("Don't forget to: git push && git push --tags")
+        if not args.push:
+            print_info("Don't forget to: git push && git push --tags")
 
 
 def main():
@@ -530,6 +587,8 @@ Examples:
     release_parser.add_argument('--version', help='Explicit version')
     release_parser.add_argument('--bump', choices=['major', 'minor', 'patch'])
     release_parser.add_argument('--tag', action='store_true', help='Create git tag')
+    release_parser.add_argument('--push', action='store_true', help='Push changes and tags')
+    release_parser.add_argument('--publish', action='store_true', help='Publish to npm/bun registry')
     release_parser.add_argument('--dry-run', action='store_true', help='Preview only')
     
     args = parser.parse_args()
