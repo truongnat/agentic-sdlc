@@ -8,11 +8,27 @@
 
 The **Brain** is the core of Agentic SDLC - an intelligent, self-learning knowledge management system located in the `.agent/` directory. It provides:
 
-1. **AI Role System** - 9 specialized agents (PM, SA, Dev, QA, etc.)
-2. **Workflow Automation** - 20 predefined workflows accessible via `/slash` commands
-3. **Knowledge Base** - Compound learning from every task, bug, and solution
-4. **Cross-IDE Compatibility** - Works with any IDE through standard markdown files
-5. **Self-Learning Engine** - Automatically improves from project experience
+1. **3-Layer Architecture** - Root (Brain), Workflow, Execution layers
+2. **AI Role System** - 14 specialized agents (PM, SA, Dev, QA, etc.)
+3. **Workflow Automation** - 15 predefined workflows accessible via `/slash` commands
+4. **Knowledge Base** - Compound learning from every task, bug, and solution
+5. **Cross-IDE Compatibility** - Works with any IDE through standard markdown files
+6. **Self-Learning Engine** - Automatically improves from project experience
+
+### 3-Layer Architecture (v2.0)
+```
+┌─────────────────────────────────────────────────────────────┐
+│              LAYER 1: ROOT (Brain)                           │
+│  Observer │ Judge │ Learner │ A/B Tester │ Model Optimizer  │
+│  Self-Improver                                               │
+├─────────────────────────────────────────────────────────────┤
+│              LAYER 2: WORKFLOW                               │
+│  /orchestrator │ /cycle │ /emergency │ /sprint              │
+├─────────────────────────────────────────────────────────────┤
+│              LAYER 3: EXECUTION                              │
+│  @PM │ @BA │ @SA │ @DEV │ @TESTER │ @DEVOPS │ Scripts       │
+└─────────────────────────────────────────────────────────────┘
+```
 
 ---
 
@@ -21,11 +37,10 @@ The **Brain** is the core of Agentic SDLC - an intelligent, self-learning knowle
 ```
 .agent/                          # 🧠 THE BRAIN (Source of Truth)
 │
-├── workflows/                   # 20 workflow definitions
-│   ├── core/                   # 8 Role workflows (pm, dev, etc.)
-│   ├── process/                # 5 Process workflows (cycle, sprint, etc.)
-│   ├── support/                # 5 Support workflows (brain, route, etc.)
-│   └── utilities/              # 2 Utility workflows (validate, metrics)
+├── workflows/                   # 15 workflow definitions
+│   ├── process/                # 6 Process workflows (cycle, sprint, etc.)
+│   ├── support/                # 6 Support workflows (brain, route, etc.)
+│   └── utilities/              # 3 Utility workflows (validate, metrics)
 │
 ├── skills/                       # 13+ AI skill definitions
 │   ├── role-pm.md              # Project Manager

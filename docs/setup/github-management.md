@@ -34,4 +34,4 @@ To effectively manage this project using the AI roles, use the following labels:
 - `status:done`: Completed.
 
 ---
-*Generated for the template-instructions manager.*
+*Generated for the agentic-sdlc manager.*

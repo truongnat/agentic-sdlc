@@ -6,6 +6,36 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [2.0.0] - 2026-01-04 (Sprint 5 - 3-Layer Architecture & Brain Meta-Controller)
+
+### Added
+- [Architecture] **3-Layer Architecture** implementation:
+  - **Layer 1 (Root):** Brain Meta-Controller with 6 components
+  - **Layer 2 (Workflow):** SDLC workflows receiving direction from Root
+  - **Layer 3 (Execution):** Skills, Scripts, Reports
+- [Brain] 6 new Root components:
+  - `observer.py` - Monitor all actions, halt on errors
+  - `judge.py` - Score reports on quality/compliance
+  - `learner.py` - Auto-trigger learning on task completion
+  - `ab_tester.py` - A/B testing for self-improvement
+  - `model_optimizer.py` - Optimal AI model selection
+  - `self_improver.py` - Analyze patterns, create improvement plans
+- [Brain] State management with `.brain-state.json`
+- [Brain] Extended `brain_cli.py` with watch, route, health commands
+
+### Changed
+- [Skills] `role-brain.md` upgraded to v3.0 - Meta-Level System Controller
+- [Skills] `role-orchestrator.md` now reports to @BRAIN
+- [Workflows] `brain.md` includes all Root component commands
+- [Workflows] `orchestrator.md` supervised by @BRAIN
+- [Rules] `global.md` updated to v2.0
+
+### Fixed
+- [Cleanup] Removed duplicate content in `brain.md`
+- [Naming] Updated 3 files from "template-instructions" to "agentic-sdlc"
+
+---
+
 ## [1.1.0] - 2026-01-03 (Sprint 5 - Tools Gap Fixes & Test Infrastructure)
 
 ### Added

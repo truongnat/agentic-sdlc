@@ -1,6 +1,6 @@
 # Implementation Plan: LEANN AI Brain Integration
 
-This plan outlines the steps to integrate the **LEANN** (Lean and Efficient AI Near-memory) framework into the `template-instructions` project to automate knowledge management and provide agents with deep project context.
+This plan outlines the steps to integrate the **LEANN** (Lean and Efficient AI Near-memory) framework into the `agentic-sdlc` project to automate knowledge management and provide agents with deep project context.
 
 ## 🎯 Objectives
 - Replace manual Knowledge Base indexing with automated LEANN indexing.

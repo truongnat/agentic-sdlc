@@ -1,6 +1,6 @@
 # Implementation Plan: GitHub Issue Management Configuration
 
-This plan outlines the setup of GitHub Issue templates and organization to align with the AI-driven SDLC roles in the `template-instructions` project.
+This plan outlines the setup of GitHub Issue templates and organization to align with the AI-driven SDLC roles in the `agentic-sdlc` project.
 
 ## 🎯 Objectives
 - Standardize issue reporting for different SDLC roles.

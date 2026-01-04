@@ -156,3 +156,4 @@ Use this at the end of **every artifact**:
 | 1.1 | 2025-12-23 | Added PO role, new tags (#product-owner, #backlog, #blocked, #hotfix, #rollback, #deployed-*), Definition of Done, Cross-Role Dependencies diagram, Incident/Hotfix workflow, Changelog |
 | 1.0 | Initial | Initial release with 10 roles and core SDLC flow |
 
+
