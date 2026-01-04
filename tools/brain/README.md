@@ -1,64 +1,73 @@
 # Brain Tools
 
-This directory contains tools for the Brain orchestrator system.
+> **@BRAIN - Meta-Level System Controller**
 
-## Files
+This directory contains the Root Layer (Layer 1) of the 3-layer architecture.
 
-| File | Description |
-|------|-------------|
-| `state_manager.py` | State machine persistence for `.brain-state.json` |
-| `brain_cli.py` | CLI interface for @BRAIN commands |
+## 3-Layer Architecture
 
-## Usage
+```
+┌────────────────────────────────────────────────────────────┐
+│              LAYER 1: ROOT (Brain)                          │
+│  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐       │
+│  │ Observer │ │  Judge   │ │ Learner  │ │A/B Tester│       │
+│  └──────────┘ └──────────┘ └──────────┘ └──────────┘       │
+│  ┌──────────────┐ ┌────────────────┐                       │
+│  │Model Optimizer│ │ Self-Improver  │                       │
+│  └──────────────┘ └────────────────┘                       │
+├────────────────────────────────────────────────────────────┤
+│              LAYER 2: WORKFLOW                              │
+│  /orchestrator │ /cycle │ /emergency │ /sprint             │
+├────────────────────────────────────────────────────────────┤
+│              LAYER 3: EXECUTION                             │
+│  @PM │ @BA │ @SA │ @DEV │ @TESTER │ Scripts                │
+└────────────────────────────────────────────────────────────┘
+```
 
-### Initialize Brain State for a Sprint
+## Root Components
+
+| Component | File | Purpose |
+|-----------|------|---------|
+| **Observer** | `observer.py` | Monitors all actions, halts on errors |
+| **Judge** | `judge.py` | Scores reports, requires mandatory reporting |
+| **Learner** | `learner.py` | Auto-triggers learning on task completion |
+| **A/B Tester** | `ab_tester.py` | Tests 2 options, selects better |
+| **Model Optimizer** | `model_optimizer.py` | Selects optimal AI model |
+| **Self-Improver** | `self_improver.py` | Creates self-improvement plans |
+
+## Quick Commands
+
 ```bash
+# State Management
 python tools/brain/brain_cli.py init 1
-```
-
-### Check Status
-```bash
 python tools/brain/brain_cli.py status
+python tools/brain/brain_cli.py transition DESIGNING
+
+# Supervision
+python tools/brain/observer.py --watch
+python tools/brain/observer.py --halt "Error"
+
+# Quality
+python tools/brain/judge.py --score "path/to/report.md"
+python tools/brain/judge.py --stats
+
+# Learning
+python tools/brain/learner.py --learn "Task completed"
+python tools/brain/learner.py --stats
+
+# A/B Testing
+python tools/brain/ab_tester.py --create "Test description"
+python tools/brain/ab_tester.py --stats
+
+# Model Optimization
+python tools/brain/model_optimizer.py --recommend "Task description"
+
+# Self-Improvement
+python tools/brain/self_improver.py --analyze
+python tools/brain/self_improver.py --plan
 ```
-
-### Transition to New State
-```bash
-python tools/brain/brain_cli.py transition DESIGNING --reason "Design phase started"
-```
-
-### Validate Current State
-```bash
-python tools/brain/brain_cli.py validate
-```
-
-### Rollback to Previous State
-```bash
-python tools/brain/brain_cli.py rollback
-```
-
-### Quick Brain Sync
-```bash
-python tools/brain/brain_cli.py sync
-```
-
-### Get Recommendations
-```bash
-python tools/brain/brain_cli.py recommend "implement user authentication"
-```
-
-## State Machine
-
-The Brain follows this state flow:
-
-```
-IDLE → PLANNING → PLAN_APPROVAL → DESIGNING → DESIGN_REVIEW → 
-DEVELOPMENT → TESTING → BUG_FIXING → DEPLOYMENT → REPORTING → 
-FINAL_REVIEW → FINAL_APPROVAL → COMPLETE
-```
-
-State is persisted in `docs/sprints/sprint-N/.brain-state.json`.
 
 ## Integration
 
-- See `.agent/skills/role-brain.md` for full documentation
-- See `.agent/workflows/support/brain.md` for sync workflows
+- Skills: `.agent/skills/role-brain.md`
+- Workflow: `.agent/workflows/support/brain.md`
