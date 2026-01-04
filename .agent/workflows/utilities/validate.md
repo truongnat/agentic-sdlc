@@ -1,5 +1,5 @@
 ---
-description: Validate - Workflow Compliance Checker
+description: [Utility] Validate - Workflow Compliance Checker
 ---
 
 # /validate - Tool Reference Validator

@@ -15,17 +15,6 @@ workflows/
 ├── README.md           # This file
 ├── DECISION-TREE.md    # Workflow routing decision tree
 │
-├── core/               # Role-based workflows (8 workflows)
-│   ├── INDEX.md
-│   ├── pm.md          # Project Manager
-│   ├── ba.md          # Business Analyst
-│   ├── sa.md          # System Analyst
-│   ├── uiux.md        # UI/UX Designer
-│   ├── dev.md         # Developer
-│   ├── tester.md      # Tester
-│   ├── seca.md        # Security Analyst
-│   └── devops.md      # DevOps Engineer
-│
 ├── process/            # Process automation (5 workflows)
 │   ├── INDEX.md
 │   ├── cycle.md       # Task lifecycle
@@ -50,18 +39,18 @@ workflows/
 
 ## Quick Reference
 
-### Core Workflows (Role-based)
+### Role/Skills Execution (Formerly Core Workflows)
 
 | Command | Role | Description |
 |---------|------|-------------|
-| `/pm` | @PM | Project planning and task allocation |
-| `/ba` | @BA | Requirements and user stories |
-| `/sa` | @SA | Architecture and API design |
-| `/uiux` | @UIUX | UI/UX design specifications |
-| `/dev` | @DEV | Implementation with Git flow |
-| `/tester` | @TESTER | QA and testing execution |
-| `/seca` | @SECA | Security assessment |
-| `/devops` | @DEVOPS | Infrastructure and deployment |
+| `/pm` | @PM | [Project Plan/Tasks](../skills/role-pm.md) |
+| `/ba` | @BA | [Requirements/Stories](../skills/role-ba.md) |
+| `/sa` | @SA | [Architecture/API](../skills/role-sa.md) |
+| `/uiux` | @UIUX | [Design Specs](../skills/role-uiux.md) |
+| `/dev` | @DEV | [Implementation](../skills/role-dev.md) |
+| `/tester` | @TESTER | [Testing/QA](../skills/role-tester.md) |
+| `/seca` | @SECA | [Security Review](../skills/role-seca.md) |
+| `/devops` | @DEVOPS | [CI/CD & Deploy](../skills/role-devops.md) |
 
 ### Process Workflows
 
@@ -135,7 +124,7 @@ Workflows can enable auto-execution with annotations:
 
 - [DECISION-TREE.md](./DECISION-TREE.md) - Workflow routing logic
 - [.agent/rules/global.md](../rules/global.md) - Global SDLC rules
-- [.agent/roles/](../roles/) - Role definitions
+- [.agent/skills/](../skills/) - Skill and Role definitions
 
 ## Tags
 

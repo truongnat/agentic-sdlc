@@ -1,5 +1,5 @@
 ---
-description: Sprint Management Workflow
+description: [Process] Sprint Management Workflow
 ---
 
 # /sprint - Sprint Lifecycle Management

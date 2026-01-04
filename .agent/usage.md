@@ -26,7 +26,7 @@ This instruction set simulates a **complete Software Development Lifecycle (SDLC
 .agent/
 ├── global.md                    # Global rules (mandatory)
 ├── usage.md                     # This usage guide
-├── roles/                       # Team roles
+├── skills/                       # Team skills
 │   ├── pm.md                    # Project Manager
 │   ├── po.md                    # Product Owner
 │   ├── sa.md                    # System Analyst

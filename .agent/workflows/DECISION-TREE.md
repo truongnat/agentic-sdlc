@@ -21,14 +21,14 @@ Start at **Node 1** and follow the usage patterns.
 - **NO** → Go to **4**
 
 ### 4. Are you performing a specific role's duty?
-- **Project Manager** (Planning, Reporting) → [`/pm`](core/pm.md)
-- **Business Analyst** (Requirements) → [`/ba`](core/ba.md)
-- **System Analyst** (Architecture) → [`/sa`](core/sa.md)
-- **UI/UX Designer** (Design) → [`/uiux`](core/uiux.md)
-- **Developer** (Code) → [`/dev`](core/dev.md)
-- **Tester** (QA) → [`/tester`](core/tester.md)
-- **Security** (Audit) → [`/seca`](core/seca.md)
-- **DevOps** (Deploy) → [`/devops`](core/devops.md)
+- **Project Manager** (Planning, Reporting) → [`/pm`](../skills/role-pm.md)
+- **Business Analyst** (Requirements) → [`/ba`](../skills/role-ba.md)
+- **System Analyst** (Architecture) → [`/sa`](../skills/role-sa.md)
+- **UI/UX Designer** (Design) → [`/uiux`](../skills/role-uiux.md)
+- **Developer** (Code) → [`/dev`](../skills/role-dev.md)
+- **Tester** (QA) → [`/tester`](../skills/role-tester.md)
+- **Security** (Audit) → [`/seca`](../skills/role-seca.md)
+- **DevOps** (Deploy) → [`/devops`](../skills/role-devops.md)
 - **NO** → Go to **5**
 
 ### 5. Are you performing maintenance or support?

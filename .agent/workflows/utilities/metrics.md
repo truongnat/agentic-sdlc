@@ -1,5 +1,5 @@
 ---
-description: Metrics - Project Statistics
+description: [Utility] Metrics - Project Statistics
 ---
 
 # /metrics - Metrics Dashboard Generator

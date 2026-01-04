@@ -96,7 +96,7 @@ Execute complete workflows with simple commands:
 
 ```
 agentic-sdlc/              # 🧠 Brain (Root)
-├── .agent/                # AI workflows, roles, KB
+├── .agent/                # AI workflows, skills, KB
 ├── tools/                 # Neo4j, research, utilities
 ├── docs/                  # Documentation
 └── projects/              # Your projects

@@ -14,9 +14,9 @@ Process workflows orchestrate multi-phase operations, coordinating between roles
 |---------|-------------|--------|
 | `/cycle` | Complete Task Lifecycle - Plan → Work → Review → Compound | ✅ Active |
 | `/orchestrator` | Full Automation Workflow - All SDLC Phases | ✅ Active |
-| `/explore` | Deep Investigation - Multi-order analysis before planning | ⚠️ Stub |
-| `/emergency` | Hotfix Response - Critical incidents & production fixes | ⚠️ Stub |
-| `/sprint` | Sprint Management - Planning, tracking, retrospective | ⚠️ Stub |
+| `/explore` | Deep Investigation - Multi-order analysis before planning | ✅ Active |
+| `/emergency` | Hotfix Response - Critical incidents & production fixes | ✅ Active |
+| `/sprint` | Sprint Management - Planning, tracking, retrospective | ✅ Active |
 
 ## Workflow Details
 
@@ -44,19 +44,19 @@ Process workflows orchestrate multi-phase operations, coordinating between roles
 
 ### `/explore` - Deep Investigation ⚠️
 - **File:** `explore.md`
-- **Status:** Stub - needs implementation
+- **Status:** ✅ Active - Manual workflow
 - **Purpose:** 4th-order analysis before major planning decisions
 - **Use Case:** Complex features, architectural decisions
 
 ### `/emergency` - Hotfix Response ⚠️
 - **File:** `emergency.md`
-- **Status:** Stub - needs implementation
+- **Status:** ✅ Active - Tool-backed
 - **Purpose:** Critical production incident response
 - **Use Case:** P0 bugs, security incidents
 
 ### `/sprint` - Sprint Management ⚠️
 - **File:** `sprint.md`
-- **Status:** Stub - needs implementation
+- **Status:** ✅ Active - Tool-backed
 - **Purpose:** Agile sprint lifecycle management
 - **Use Case:** Sprint planning, daily standups, retrospectives
 

@@ -1,5 +1,5 @@
 ---
-description: Deep Investigation Workflow
+description: [Process] Deep Investigation Workflow
 ---
 
 # /explore - Multi-Order Analysis

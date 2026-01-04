@@ -1,5 +1,5 @@
 ---
-description: Complete Task Lifecycle - Plan → Work → Review → Compound
+description: [Process] Complete Task Lifecycle - Plan → Work → Review → Compound
 ---
 
 # /cycle - Complete Task Lifecycle

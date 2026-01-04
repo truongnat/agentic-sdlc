@@ -1,5 +1,5 @@
 ---
-description: LEANN AI Brain - Automated Project Memory
+description: [Support] LEANN AI Brain - Automated Project Memory
 ---
 
 # Brain Workflow

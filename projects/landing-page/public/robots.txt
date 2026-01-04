@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://agentic-sdlc.dev/sitemap.xml

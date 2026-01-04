@@ -1,5 +1,5 @@
 ---
-description: Emergency/Hotfix Response Workflow
+description: [Process] Emergency/Hotfix Response Workflow
 ---
 
 # /emergency - Critical Incident Response

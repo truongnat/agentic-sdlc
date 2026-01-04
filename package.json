@@ -6,7 +6,6 @@
   "private": true,
   "packageManager": "bun@1.2.2",
   "workspaces": [
-    "projects/landing-page",
     "projects/todo-app/frontend",
     "projects/todo-app/backend"
   ],
@@ -32,17 +31,14 @@
     "release:changelog": "python tools/release/release.py changelog",
     "release:version": "python tools/release/release.py version --auto",
     "release": "python tools/release/release.py release",
-    "dev:landing": "turbo run dev --filter=agentic-sdlc-landing",
     "dev:todo:fe": "turbo run dev --filter=todo-app-frontend",
     "dev:todo:be": "turbo run dev --filter=todo-app-backend",
     "dev:todo": "turbo run dev --filter=todo-app-*",
     "dev:all": "turbo run dev",
-    "build:landing": "turbo run build --filter=agentic-sdlc-landing",
     "build:todo:fe": "turbo run build --filter=todo-app-frontend",
     "build:todo:be": "turbo run build --filter=todo-app-backend",
     "build:todo": "turbo run build --filter=todo-app-*",
     "build:all": "turbo run build",
-    "test:landing": "turbo run test --filter=agentic-sdlc-landing",
     "test:todo:fe": "turbo run test --filter=todo-app-frontend",
     "test:todo:be": "turbo run test --filter=todo-app-backend",
     "test:todo": "turbo run test --filter=todo-app-*",
@@ -51,7 +47,6 @@
     "typecheck": "turbo run typecheck",
     "clean": "turbo run clean",
     "clean:all": "turbo run clean && rimraf node_modules/.cache .turbo",
-    "preview:landing": "turbo run preview --filter=agentic-sdlc-landing",
     "preview:todo:fe": "turbo run preview --filter=todo-app-frontend"
   },
   "keywords": [

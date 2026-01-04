@@ -27,7 +27,7 @@ The **Brain** is the core of Agentic SDLC - an intelligent, self-learning knowle
 │   ├── support/                # 5 Support workflows (brain, route, etc.)
 │   └── utilities/              # 2 Utility workflows (validate, metrics)
 │
-├── roles/                       # 13+ AI role definitions
+├── skills/                       # 13+ AI skill definitions
 │   ├── role-pm.md              # Project Manager
 │   ├── role-sa.md              # System Analyst
 │   ├── role-dev.md             # Developer
@@ -110,7 +110,7 @@ description: Brief workflow description
 #workflow-tag #skill-tag
 ```
 
-### 2. Roles (`.agent/roles/`)
+### 2. Skills (`.agent/skills/`)
 
 **What:** Specialized AI agent definitions for each SDLC phase
 **How to use:** Reference with `@ROLE` mentions in your IDE
@@ -323,7 +323,7 @@ Documentation:
 
 2. **Manual Integration:**
    - Point your IDE to `.agent/workflows/` directory
-   - Reference role files in `.agent/roles/`
+   - Reference skill files in `.agent/skills/`
    - Use workflows as instruction templates
 
 3. **In Chat:**
