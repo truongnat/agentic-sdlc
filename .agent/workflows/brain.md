@@ -16,65 +16,65 @@ Brain is NOT an executor—it monitors, detects issues, routes to handlers, scor
 
 ### Observer (Halt on Errors)
 ```bash
-python tools/brain/observer.py --watch       # Monitor workflows
-python tools/brain/observer.py --halt "Err"  # Halt system
-python tools/brain/observer.py --resume      # Resume after halt
+agentic-sdlc run tools/brain/observer.py --watch       # Monitor workflows
+agentic-sdlc run tools/brain/observer.py --halt "Err"  # Halt system
+agentic-sdlc run tools/brain/observer.py --resume      # Resume after halt
 ```
 
 ### Judge (Score Quality)
 ```bash
-python tools/brain/judge.py --score "path/to/report.md"
-python tools/brain/judge.py --review --sprint 1
-python tools/brain/judge.py --threshold 7    # Set pass threshold
+agentic-sdlc run tools/brain/judge.py --score "path/to/report.md"
+agentic-sdlc run tools/brain/judge.py --review --sprint 1
+agentic-sdlc run tools/brain/judge.py --threshold 7    # Set pass threshold
 ```
 
 ### Learner (Auto-Learning)
 ```bash
-python tools/brain/learner.py --learn "Task completed"
-python tools/brain/learner.py --watch
-python tools/brain/learner.py --stats
+agentic-sdlc learn --learn "Task completed"
+agentic-sdlc learn --watch
+agentic-sdlc learn --stats
 ```
 
 ### A/B Tester (Compare Options)
 ```bash
-python tools/brain/ab_tester.py --create "Test description"
-python tools/brain/ab_tester.py --compare --test-id TEST-001
-python tools/brain/ab_tester.py --select A --test-id TEST-001
+agentic-sdlc run tools/brain/ab_tester.py --create "Test description"
+agentic-sdlc run tools/brain/ab_tester.py --compare --test-id TEST-001
+agentic-sdlc run tools/brain/ab_tester.py --select A --test-id TEST-001
 ```
 
 ### Model Optimizer (Token Efficiency)
 ```bash
-python tools/brain/model_optimizer.py --recommend "Task description"
-python tools/brain/model_optimizer.py --record --model "gemini-2.5" --tokens 1500
+agentic-sdlc run tools/brain/model_optimizer.py --recommend "Task description"
+agentic-sdlc run tools/brain/model_optimizer.py --record --model "gemini-2.5" --tokens 1500
 ```
 
 ### Self-Improver (Create Improvement Plans)
 ```bash
-python tools/brain/self_improver.py --analyze  # Analyze all data
-python tools/brain/self_improver.py --plan     # Create improvement plan
-python tools/brain/self_improver.py --apply-plan PLAN-ID
+agentic-sdlc run tools/brain/self_improver.py --analyze  # Analyze all data
+agentic-sdlc run tools/brain/self_improver.py --plan     # Create improvement plan
+agentic-sdlc run tools/brain/self_improver.py --apply-plan PLAN-ID
 ```
 
 ## State Management
 ```bash
-python tools/brain/brain_cli.py init 1          # Initialize sprint
-python tools/brain/brain_cli.py status          # Check status
-python tools/brain/brain_cli.py transition STATE --reason "Reason"
-python tools/brain/brain_cli.py validate        # Validate state
-python tools/brain/brain_cli.py rollback        # Rollback
+agentic-sdlc brain init 1          # Initialize sprint
+agentic-sdlc brain status          # Check status
+agentic-sdlc brain transition STATE --reason "Reason"
+agentic-sdlc brain validate        # Validate state
+agentic-sdlc brain rollback        # Rollback
 ```
 
 ## Supervisor Commands
 ```bash
-python tools/brain/brain_cli.py watch   # Monitor workflows
-python tools/brain/brain_cli.py route "request"  # Route to workflow
-python tools/brain/brain_cli.py health  # Health check
+agentic-sdlc brain watch   # Monitor workflows
+agentic-sdlc run tools/brain/brain_cli.py route "request"  # Route to workflow
+agentic-sdlc health  # Health check
 ```
 
 ## Sync Commands
 ```bash
-python tools/neo4j/brain_parallel.py --sync  # Quick sync
-python tools/neo4j/brain_parallel.py --full  # Full sync
+agentic-sdlc kb compound sync
+agentic-sdlc kb compound sync --full
 ```
 
 #brain #root-layer #meta-controller
@@ -84,4 +84,3 @@ python tools/neo4j/brain_parallel.py --full  # Full sync
 
 ## ENFORCEMENT REMINDER
 Before executing, complete /preflight checks.
-

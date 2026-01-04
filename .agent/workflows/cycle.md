@@ -11,14 +11,14 @@ description: [Process] Complete Task Lifecycle - Plan → Work → Review → Co
 4. **SELF-LEARNING:** After completion, update Neo4j.
 
 ### 0.0 **Team Communication (MANDATORY):**
-   - **Check History:** `python tools/communication/cli.py history --channel general --limit 10`
-   - **Announce Start:** `python tools/communication/cli.py send --channel general --thread "SDLC-Flow" --role AGENT --content "Starting /cycle for [Task]."`
+   - **Check History:** `agentic-sdlc run tools/communication/cli.py history --channel general --limit 10`
+   - **Announce Start:** `agentic-sdlc run tools/communication/cli.py send --channel general --thread "SDLC-Flow" --role AGENT --content "Starting /cycle for [Task]."`
 
 ## Workflow Steps
 
 ### 1. Research Phase (MANDATORY)
 ```bash
-python tools/research/research_agent.py --feature "[task]" --type feature
+agentic-sdlc research --feature "[task]" --type feature
 ```
 - [ ] Search KB for similar implementations.
 - [ ] Check GitHub issues for context.
@@ -47,8 +47,8 @@ git push -u origin feat/TASK-ID-name
 
 ### 7. Self-Learning (MANDATORY)
 ```bash
-python tools/neo4j/sync_skills_to_neo4j.py
-python tools/neo4j/learning_engine.py --record-success "TASK-ID" --task-type "feature"
+agentic-sdlc kb compound sync
+agentic-sdlc learn --record-success "TASK-ID" --task-type "feature"
 ```
 - Update `CHANGELOG.md`.
 

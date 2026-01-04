@@ -13,16 +13,16 @@ All phases must be executed in order. No skipping.
 
 ## State Machine Integration
 This workflow follows the state machine defined in `@BRAIN`. Before each phase transition:
-1. Run `python tools/brain/brain_cli.py validate` to check prerequisites
-2. Run `python tools/brain/brain_cli.py transition <NEW_STATE>` to update state
+1. Run `agentic-sdlc brain validate` to check prerequisites
+2. Run `agentic-sdlc brain transition <NEW_STATE>` to update state
 3. Artifacts required per state are validated automatically
 
 ### 0.0 **Team Communication (MANDATORY):**
-   - **Announce:** `python tools/communication/cli.py send --channel general --thread "SDLC-Flow" --role ORCHESTRATOR --content "Starting Full SDLC Automation."`
+   - **Announce:** `agentic-sdlc run tools/communication/cli.py send --channel general --thread "SDLC-Flow" --role ORCHESTRATOR --content "Starting Full SDLC Automation."`
 
 ### 0.1 **Initialize State (If New Sprint):**
 ```bash
-python tools/brain/brain_cli.py init <SPRINT_NUMBER>
+agentic-sdlc brain init <SPRINT_NUMBER>
 ```
 
 ## SDLC Flow (State Transitions)
@@ -55,8 +55,8 @@ python tools/brain/brain_cli.py init <SPRINT_NUMBER>
 - Update CHANGELOG, Final Review.
 
 ### Phase 11: Self-Learning
-- Run: `python tools/neo4j/sync_skills_to_neo4j.py`
-- Run: `python tools/neo4j/learning_engine.py --record-success`
+- Run: `agentic-sdlc kb compound sync`
+- Run: `agentic-sdlc learn --record-success`
 
 #orchestrator #automation #sdlc
 ---

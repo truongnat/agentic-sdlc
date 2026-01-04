@@ -13,7 +13,9 @@ const commands = {
     'agent': 'tools/run.py',
     'validate': 'tools/validation/validate.py',
     'health': 'tools/validation/health-check.py',
-    'setup': 'tools/setup/init.py'
+    'setup': 'tools/setup/init.py',
+    'brain': 'tools/brain/brain_cli.py',
+    'research': 'tools/research/research_agent.py'
 };
 
 const args = process.argv.slice(2);
@@ -29,6 +31,8 @@ function printUsage() {
     console.log("  validate  Validate system");
     console.log("  health    Check health");
     console.log("  setup     Initialize project");
+    console.log("  brain     Brain system management");
+    console.log("  research  Research agent");
 }
 
 if (!command || command === '--help' || command === '-h') {
