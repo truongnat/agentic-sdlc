@@ -6,10 +6,10 @@
 
 **Agentic SDLC** is an AI-powered development framework that simulates a complete software development team within your IDE. It provides:
 
-- **13+ Specialized AI Roles** - PM, SA, UI/UX, QA, Security, Dev, DevOps, Tester, Reporter, and more
-- **32+ Automated Workflows** - From planning to deployment with `/slash` commands
-- **Intelligent Brain System** - LEANN + Neo4j for compound learning and knowledge graphs
-- **Cross-IDE Compatibility** - Works with Cursor, Windsurf, Cline, Aider, and any AI-powered IDE
+- **14 Specialized AI Roles** - PM, BA, SA, UI/UX, QA, Security, Dev, DevOps, Tester, Reporter, and more
+- **12 Automated Workflows** - From planning to deployment with `/slash` commands
+- **Intelligent Brain System** - 3-Layer architecture with state management and self-learning
+- **Cross-IDE Compatibility** - Works with Cursor, Windsurf, Cline, Aider, Gemini, and any AI-powered IDE
 - **Monorepo Architecture** - Shared brain system across multiple projects
 
 ## 🧠 The Brain System
@@ -64,7 +64,7 @@ agentic-sdlc init-kb
 
 ## 🚀 Core Features
 
-### 1. AI Role System (13+ Roles)
+### 1. AI Role System (14 Roles)
 
 Specialized AI agents for every SDLC phase:
 
@@ -75,21 +75,26 @@ Review      → @QA, @SECA
 Development → @DEV, @DEVOPS
 Testing     → @TESTER
 Delivery    → @REPORTER, @STAKEHOLDER
-Automation  → @ORCHESTRATOR, @AUTO
+Meta        → @BRAIN, @ORCHESTRATOR
 ```
 
-### 2. Slash Commands (32+ Workflows)
+### 2. Slash Commands (12 Workflows)
 
 Execute complete workflows with simple commands:
 
 ```bash
-/pm              # Project planning
-/auto            # Full automation
+/brain           # Brain system management (sync, stats)
 /cycle           # Complete task lifecycle
-/dev             # Development workflow
-/qa              # Quality assurance
-/brain           # Brain system management
-/kb-search       # Search knowledge base
+/explore         # Deep investigation
+/orchestrator    # Full SDLC automation
+/sprint          # Sprint management
+/validate        # System validation
+/metrics         # View metrics dashboard
+/release         # Release management
+/emergency       # Critical incident response
+/route           # Intelligent workflow routing
+/compound        # Knowledge capture
+/housekeeping    # Cleanup & maintenance
 ```
 
 ### 3. Monorepo Architecture

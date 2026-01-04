@@ -9,8 +9,8 @@
 The **Brain** is the core of Agentic SDLC - an intelligent, self-learning knowledge management system located in the `.agent/` directory. It provides:
 
 1. **3-Layer Architecture** - Root (Brain), Workflow, Execution layers
-2. **AI Role System** - 14 specialized agents (PM, SA, Dev, QA, etc.)
-3. **Workflow Automation** - 15 predefined workflows accessible via `/slash` commands
+2. **AI Role System** - 14 specialized agents (PM, BA, SA, Dev, QA, etc.)
+3. **Workflow Automation** - 12 predefined workflows accessible via `/slash` commands
 4. **Knowledge Base** - Compound learning from every task, bug, and solution
 5. **Cross-IDE Compatibility** - Works with any IDE through standard markdown files
 6. **Self-Learning Engine** - Automatically improves from project experience
@@ -37,18 +37,23 @@ The **Brain** is the core of Agentic SDLC - an intelligent, self-learning knowle
 ```
 .agent/                          # 🧠 THE BRAIN (Source of Truth)
 │
-├── workflows/                   # 15 workflow definitions
-│   ├── process/                # 6 Process workflows (cycle, sprint, etc.)
-│   ├── support/                # 6 Support workflows (brain, route, etc.)
-│   └── utilities/              # 3 Utility workflows (validate, metrics)
+├── workflows/                   # 12 workflow definitions (flat structure)
+│   ├── brain.md                # Brain system management
+│   ├── cycle.md                # Complete task lifecycle
+│   ├── explore.md              # Deep investigation
+│   ├── orchestrator.md         # Full SDLC automation
+│   ├── sprint.md               # Sprint management
+│   ├── emergency.md            # Critical incident response
+│   └── ...                     # + 6 more workflows
 │
-├── skills/                       # 13+ AI skill definitions
+├── skills/                      # 14 AI role definitions
 │   ├── role-pm.md              # Project Manager
+│   ├── role-ba.md              # Business Analyst
 │   ├── role-sa.md              # System Analyst
 │   ├── role-dev.md             # Developer
 │   ├── role-qa.md              # Quality Assurance
 │   ├── role-seca.md            # Security Analyst
-│   └── ...
+│   └── ...                     # + 8 more roles
 │
 ├── knowledge-base/              # Compound learning system
 │   ├── INDEX.md                # Searchable index
@@ -89,19 +94,22 @@ The **Brain** is the core of Agentic SDLC - an intelligent, self-learning knowle
 **What:** Step-by-step automation for SDLC tasks
 **How to use:** Reference workflows in your IDE or use `/slash` commands
 
-**Key Workflows:**
+**Key Workflows (12 total):**
 
 | Command | Purpose | What It Does |
 |---------|---------|--------------|
-| `/auto` | Full Automation | Complete SDLC from planning to deployment |
+| `/brain` | Brain Management | Sync knowledge, get stats, state control |
 | `/cycle` | Task Lifecycle | Plan → Work → Review → Document |
-| `/pm` | Project Management | Requirements gathering & planning |
-| `/dev` | Development | Implementation workflow |
-| `/qa` | Quality Assurance | Design review & testing strategy |
-| `/brain` | Brain Management | Sync knowledge, get recommendations |
-| `/kb-search` | Search KB | Find relevant knowledge entries |
 | `/explore` | Deep Investigation | Multi-order analysis before planning |
+| `/orchestrator` | Full Automation | Complete SDLC from planning to deployment |
+| `/sprint` | Sprint Management | Sprint planning and tracking |
 | `/emergency` | Hotfix Response | Critical incidents & production fixes |
+| `/validate` | System Validation | Check system health and configuration |
+| `/metrics` | Metrics Dashboard | View project metrics and statistics |
+| `/release` | Release Management | Version bumping and changelog generation |
+| `/route` | Workflow Routing | Intelligently route requests to workflows |
+| `/compound` | Knowledge Capture | Document solutions for future reuse |
+| `/housekeeping` | Maintenance | Cleanup and file organization |
 
 **Workflow Structure:**
 
@@ -811,12 +819,12 @@ python tools/neo4j/brain_parallel.py --stats
 ### Most Used Workflows
 
 ```
-/auto      - Full automation
-/pm        - Project planning
-/dev       - Development
-/qa        - Quality review
-/brain     - Brain management
-/kb-search - Search knowledge
+/brain        - Brain management (sync, status, route)
+/cycle        - Complete task lifecycle
+/orchestrator - Full SDLC automation
+/explore      - Deep investigation
+/sprint       - Sprint management
+/release      - Release & changelog
 ```
 
 ### Most Used Roles

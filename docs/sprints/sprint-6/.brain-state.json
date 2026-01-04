@@ -1,0 +1,29 @@
+{
+  "sprint": "sprint-6",
+  "currentState": "PLANNING",
+  "previousState": "IDLE",
+  "stateHistory": [
+    {
+      "state": "IDLE",
+      "timestamp": "2026-01-04T08:15:56.402416",
+      "reason": "Initial state"
+    },
+    {
+      "state": "PLANNING",
+      "from": "IDLE",
+      "timestamp": "2026-01-04T08:16:12.210909",
+      "reason": "Testing workflow",
+      "forced": false
+    }
+  ],
+  "approvalGates": {
+    "planApproved": false,
+    "designApproved": false,
+    "securityApproved": false,
+    "finalApproved": false
+  },
+  "artifacts": {},
+  "roleStatus": {},
+  "createdAt": "2026-01-04T08:15:56.402451",
+  "lastUpdated": "2026-01-04T08:16:12.210868"
+}
