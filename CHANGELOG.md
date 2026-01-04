@@ -9,6 +9,14 @@ All notable changes to this project will be documented in this file.
 ## [1.4.0] - 2026-01-04
 
 ### Added
+- manual bump to 1.4.0 and publish
+
+
+---
+
+## [1.4.0] - 2026-01-04
+
+### Added
 - [Tools] add full release automation including auto-commit
 
 ### Maintenance

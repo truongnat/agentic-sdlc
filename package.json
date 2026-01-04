@@ -3,7 +3,7 @@
   "version": "1.4.0",
   "description": "Simulating a complete Software Development Lifecycle (SDLC) with specialized AI Agents.",
   "type": "module",
-  "private": true,
+  "private": false,
   "packageManager": "bun@1.2.2",
   "workspaces": [
     "projects/todo-app/frontend",
