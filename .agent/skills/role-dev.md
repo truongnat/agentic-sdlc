@@ -62,6 +62,11 @@ kb compound search "architecture-pattern"
 - Communicate blockers immediately
 - Share learnings with team via KB
 
+### 7. Tooling Standards
+- **Polyglot:** Support Python/Node environments (use `agentic-sdlc` bridge).
+- **Testing:** ALL new tools must include integration tests in `tests/`.
+- **CLI:** Ensure tools have `-h/--help` support.
+
 ## Artifact Requirements
 
 **Focus on code, not logs.**
@@ -90,16 +95,16 @@ kb compound search "architecture-pattern"
 ### How to Document
 ```bash
 # Interactive KB entry creation
-kb add
+agentic-sdlc kb add
 
 # Or compound add (auto-syncs to Neo4j)
-kb compound add
+agentic-sdlc kb compound add
 
 # Update index
-kb index
+agentic-sdlc kb index
 
 # Full sync to Neo4j Brain
-kb compound sync
+agentic-sdlc kb compound sync
 ```
 
 ### KB Entry Template

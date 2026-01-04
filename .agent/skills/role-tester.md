@@ -217,9 +217,17 @@ After testing:
    - Run: `python tools/research/research_agent.py --bug "[description]" --type bug`
 
 ### 1. **Design Verification (Phase 4):**
-   - Review specs from @SA and @UIUX.
-   - Create `Design-Verification-Report-Sprint-[N].md`.
-   - Decision: APPROVED / REJECTED.
+   - **Review Artifacts:**
+     - Review `Project-Plan-v*.md`
+     - Review `UIUX-Design-Spec-Sprint-[N]-v*.md`
+     - Review `Backend-Design-Spec-Sprint-[N]-v*.md`
+   - **Verification Checklist:**
+     - [ ] Requirement coverage (all features addressed)
+     - [ ] Design consistency (UI vs Backend)
+     - [ ] Testability assessment
+     - [ ] Edge cases & error scenarios identified
+   - **Action:** Create `Design-Verification-Report-Sprint-[N].md`.
+   - **Decision:** APPROVED / REJECTED.
 
 ### 2. **Testing Execution (Phase 6):**
    - Run E2E tests using Playwright MCP.

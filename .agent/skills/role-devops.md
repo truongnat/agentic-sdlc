@@ -30,6 +30,11 @@ When acting as @DEVOPS, you are the DevOps Engineer r#devops #deployment #infras
    - Deploy to staging for verification.
    - Deploy to production after final approval.
 
+### 4. **Release Management:**
+   - Manage versioning via `/release` workflow.
+   - Execute `agentic-sdlc release` for automated version bump, tag, and publish.
+   - Ensure `CHANGELOG.md` is updated automatically.
+
 ### 4. **Self-Learning:**
    - Run: `python tools/neo4j/sync_skills_to_neo4j.py`t.
 
