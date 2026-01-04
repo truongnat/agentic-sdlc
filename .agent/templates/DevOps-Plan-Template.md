@@ -28,6 +28,13 @@
 | Staging | [staging-url] | Pre-production testing |
 | Production | [prod-url] | Live environment |
 
+## 3. Release Strategy
+| Component | Strategy | Details |
+|-----------|----------|---------|
+| Versioning | SemVer | Automated via `release.py` |
+| Tagging | Git Tags | vX.Y.Z |
+| Publish | [npm/docker] | [Registry URL] |
+
 ## 3. CI/CD Pipeline
 
 ```

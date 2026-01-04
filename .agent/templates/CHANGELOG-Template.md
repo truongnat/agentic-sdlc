@@ -1,6 +1,6 @@
 # Changelog Template
 
-**⚠️ IMPORTANT:** This is a TEMPLATE file only. Do NOT create CHANGELOG.md in the project root.
+**⚠️ IMPORTANT:** This is a TEMPLATE. Root `CHANGELOG.md` is managed AUTOMATICALLY by `release.py`.
 
 All project changes should be documented in:
 - Sprint-specific: `docs/sprints/sprint-[N]/reports/Phase-Report-Sprint-[N]-v*.md`
@@ -58,7 +58,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Usage Guidelines
 
-1. **DO NOT** create CHANGELOG.md in project root
+1. **DO NOT** manually edit CHANGELOG.md in project root (Automation Only)
 2. **DO** document changes in Phase Reports per sprint
 3. **DO** consolidate in Final Project Report
 4. **DO** use semantic versioning for releases

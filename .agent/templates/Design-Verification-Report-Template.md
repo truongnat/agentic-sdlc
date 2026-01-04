@@ -5,7 +5,7 @@
 |-------|-------|
 | Version | [X.0] |
 | Date | [YYYY-MM-DD] |
-| Author | @QA |
+| Author | @TESTER |
 | Status | Pass / Fail / Conditional Pass |
 
 ---
@@ -30,17 +30,17 @@
 ### 3.1 Completeness
 | ID | Finding | Severity | Status |
 |----|---------|----------|--------|
-| QA-001 | [Finding description] | High/Med/Low | Open/Resolved |
+| VER-001 | [Finding description] | High/Med/Low | Open/Resolved |
 
 ### 3.2 Consistency
 | ID | Finding | Severity | Status |
 |----|---------|----------|--------|
-| QA-002 | [Finding description] | High/Med/Low | Open/Resolved |
+| VER-002 | [Finding description] | High/Med/Low | Open/Resolved |
 
 ### 3.3 Testability
 | ID | Finding | Severity | Status |
 |----|---------|----------|--------|
-| QA-003 | [Finding description] | High/Med/Low | Open/Resolved |
+| VER-003 | [Finding description] | High/Med/Low | Open/Resolved |
 
 ## 4. Requirements Traceability
 | Requirement | Design Reference | Covered |
