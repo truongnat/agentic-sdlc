@@ -151,16 +151,19 @@ class ReleaseManager:
         """Parse a conventional commit message."""
         # Pattern: type(scope): description
         # or: type: description
-        pattern = r'^(\w+)(?:\(([^)]+)\))?\s*:\s*(.+)$'
+        # Pattern: type(scope)!: description or type!: description
+        # Regex: (type)(optional scope)(optional !): (description)
+        pattern = r'^(\w+)(?:\(([^)]+)\))?(!)?\s*:\s*(.+)$'
         match = re.match(pattern, message, re.IGNORECASE)
         
         if match:
             commit_type = match.group(1).lower()
             scope = match.group(2)
-            description = match.group(3)
+            is_breaking_char = match.group(3) == '!'
+            description = match.group(4)
             
             # Check for breaking change indicator
-            breaking = '!' in message.split(':')[0] or message.upper().startswith('BREAKING')
+            breaking = is_breaking_char or 'BREAKING' in message.upper().split(':')[0]
             
             return {
                 'type': commit_type,

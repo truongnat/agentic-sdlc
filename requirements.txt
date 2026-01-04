@@ -1,0 +1,5 @@
+neo4j>=5.0.0
+pytest>=7.0.0
+pytest-cov>=4.0.0
+googlesearch-python>=1.2.0
+requests>=2.28.0
