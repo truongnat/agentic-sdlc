@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+import Hero from '../components/Hero.astro';
+import Architecture from '../components/Architecture.astro';
+import Workflows from '../components/Workflows.astro';
+import Roles from '../components/Roles.astro';
+import Features from '../components/Features.astro';
+import CTA from '../components/CTA.astro';
+
+const title = 'Agentic SDLC - AI-Powered Development Team';
+const description = 'Transform your IDE into a complete development team with 14 AI roles, 12 automated workflows, and intelligent self-learning brain system.';
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="AI development, SDLC automation, AI coding assistant, developer tools, workflow automation" />
+    <meta name="author" content="truongnat" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://agentic-sdlc.dev" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href="/" class="font-bold text-lg">
+          🧠 <span class="gradient-text">Agentic SDLC</span>
+        </a>
+        <div class="flex items-center gap-6">
+          <a href="#architecture" class="text-sm text-muted-foreground hover:text-foreground transition-colors hidden sm:block">Architecture</a>
+          <a href="#workflows" class="text-sm text-muted-foreground hover:text-foreground transition-colors hidden sm:block">Workflows</a>
+          <a href="#roles" class="text-sm text-muted-foreground hover:text-foreground transition-colors hidden sm:block">Roles</a>
+          <a href="https://github.com/truongnat/agentic-sdlc" target="_blank" rel="noopener" class="btn-secondary text-sm py-2 px-4">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <Hero />
+      <Architecture />
+      <Workflows />
+      <Roles />
+      <Features />
+      <CTA />
+    </main>
+  </body>
+</html>

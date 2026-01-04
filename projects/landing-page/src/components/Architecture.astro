@@ -1,0 +1,85 @@
+---
+/**
+ * Architecture Section - 3-Layer Brain diagram
+ */
+const layers = [
+  {
+    name: 'Layer 1: Root (Brain)',
+    description: 'Meta-level controller that supervises all workflows',
+    components: ['Observer', 'Judge', 'Learner', 'A/B Tester', 'Self-Improver'],
+    color: 'from-purple-500 to-indigo-500',
+  },
+  {
+    name: 'Layer 2: Workflow',
+    description: '12 automated workflows for complete SDLC automation',
+    components: ['/orchestrator', '/cycle', '/sprint', '/explore', '/brain'],
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    name: 'Layer 3: Execution',
+    description: '14 specialized AI roles and Python tools',
+    components: ['@PM', '@SA', '@DEV', '@QA', '@DEVOPS', 'Scripts'],
+    color: 'from-cyan-500 to-green-500',
+  },
+];
+---
+
+<section id="architecture" class="section bg-secondary/30">
+  <div class="container">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        3-Layer Brain Architecture
+      </h2>
+      <p class="text-muted-foreground max-w-2xl mx-auto">
+        Intelligent knowledge management with self-learning capabilities
+      </p>
+    </div>
+
+    <!-- Architecture Diagram -->
+    <div class="max-w-4xl mx-auto space-y-4">
+      {layers.map((layer, index) => (
+        <div 
+          class="card group relative overflow-hidden"
+          style={`animation-delay: ${index * 0.1}s`}
+        >
+          <!-- Gradient bar -->
+          <div class={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b ${layer.color}`}></div>
+          
+          <div class="pl-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <h3 class="text-lg font-semibold mb-1">{layer.name}</h3>
+                <p class="text-sm text-muted-foreground">{layer.description}</p>
+              </div>
+              <div class="flex flex-wrap gap-2">
+                {layer.components.map((component) => (
+                  <span class="px-2 py-1 bg-background rounded text-xs font-mono text-muted-foreground border border-border">
+                    {component}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+
+      <!-- Connection arrows -->
+      <div class="flex justify-center py-2">
+        <svg class="w-6 h-12 text-muted-foreground" fill="none" viewBox="0 0 24 48">
+          <path d="M12 0v48M12 48l-6-6M12 48l6-6" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </div>
+
+      <!-- Knowledge Base -->
+      <div class="card border-primary/30 bg-primary/5">
+        <div class="text-center">
+          <span class="text-2xl mb-2 block">🧠</span>
+          <h4 class="font-semibold mb-1">Knowledge Base</h4>
+          <p class="text-sm text-muted-foreground">
+            Compound learning from every task, bug, and solution
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

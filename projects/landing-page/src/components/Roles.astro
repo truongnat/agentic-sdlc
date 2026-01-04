@@ -1,0 +1,91 @@
+---
+/**
+ * Roles Section - 14 AI agents
+ */
+const roleGroups = [
+  {
+    category: 'Planning',
+    icon: '📋',
+    roles: [
+      { name: '@PM', title: 'Project Manager' },
+      { name: '@BA', title: 'Business Analyst' },
+      { name: '@PO', title: 'Product Owner' },
+    ],
+  },
+  {
+    category: 'Design',
+    icon: '🎨',
+    roles: [
+      { name: '@SA', title: 'System Analyst' },
+      { name: '@UIUX', title: 'UI/UX Designer' },
+    ],
+  },
+  {
+    category: 'Quality',
+    icon: '✅',
+    roles: [
+      { name: '@QA', title: 'Quality Assurance' },
+      { name: '@SECA', title: 'Security Analyst' },
+      { name: '@TESTER', title: 'Tester' },
+    ],
+  },
+  {
+    category: 'Development',
+    icon: '💻',
+    roles: [
+      { name: '@DEV', title: 'Developer' },
+      { name: '@DEVOPS', title: 'DevOps Engineer' },
+    ],
+  },
+  {
+    category: 'Delivery',
+    icon: '📦',
+    roles: [
+      { name: '@REPORTER', title: 'Reporter' },
+      { name: '@STAKEHOLDER', title: 'Stakeholder' },
+    ],
+  },
+  {
+    category: 'Meta',
+    icon: '🤖',
+    roles: [
+      { name: '@BRAIN', title: 'Brain Controller' },
+      { name: '@ORCHESTRATOR', title: 'Orchestrator' },
+    ],
+  },
+];
+---
+
+<section id="roles" class="section bg-secondary/30">
+  <div class="container">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        14 Specialized AI Roles
+      </h2>
+      <p class="text-muted-foreground max-w-2xl mx-auto">
+        Complete development team simulation for every SDLC phase
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+      {roleGroups.map((group) => (
+        <div class="card">
+          <div class="text-center mb-3">
+            <span class="text-xl">{group.icon}</span>
+            <h3 class="text-sm font-semibold text-muted-foreground mt-1">
+              {group.category}
+            </h3>
+          </div>
+          <div class="space-y-2">
+            {group.roles.map((role) => (
+              <div class="text-center">
+                <code class="text-xs font-mono text-primary">{role.name}</code>
+                <p class="text-xs text-muted-foreground">{role.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
